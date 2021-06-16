@@ -1,0 +1,23 @@
+
+
+
+ALIGN 4
+NESFEAnims1:
+#incbin "nesfe_anim1.dmp"
+
+ALIGN 4
+NESFEAnims2:
+#incbin "nesfe_anim2.dmp"
+
+ALIGN 4
+NESFEAnims3:
+#incbin "nesfe_anim3.dmp"
+
+ALIGN 4
+NESFETilesetAnims:
+tilesetAnimation(14,4096,NESFEAnims1)
+tilesetAnimation(8,4096,NESFEAnims2)
+tilesetAnimation(14,4096,NESFEAnims3)
+tilesetAnimation(8,4096,NESFEAnims2)
+WORD 0 0
+

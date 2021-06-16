@@ -1,0 +1,51 @@
+2
+Spell Association Table by Sme
+0x8AFBD8
+162
+16
+NULL
+NULL
+
+Item ID
+0
+2
+NEHU
+NULL
+
+1 or 2
+2
+2
+NEHU
+NULL
+
+Magic Animation
+4
+4
+NEHU
+NULL
+
+Map Animation Proc
+8
+4
+NEHU
+NULL
+
+Deals Damage?
+12
+1
+NEHU
+NULL
+
+Map Sprite Direction
+13
+1
+NEHU
+NULL
+
+Map Sprite Color When Hit
+14
+2
+NEHU
+NULL
+
+

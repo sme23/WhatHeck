@@ -1,0 +1,23 @@
+## RecruitName
+Recruit[X]
+
+## RecruitDesc
+RecruitDesc[X]
+
+## PrisonerName
+Prisoner[X]
+
+## PrisonerDesc
+PrisonerDesc[X]
+
+## ImperialName
+Imperial[X]
+
+## ImperialDesc
+ImperialDesc[X]
+
+## MonsterName
+Monster[X]
+
+## MonsterDesc
+MonsterDesc[X]

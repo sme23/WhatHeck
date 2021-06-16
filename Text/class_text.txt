@@ -1,0 +1,25 @@
+
+## ScholarName
+Scholar[X]
+
+## ScholarDesc
+ScholarDesc[X]
+
+## GreenhornName
+Greenhorn[X]
+
+## GreenhornDesc
+GreenhornDesc[X]
+
+## ProfessorName
+Professor[X]
+
+## ProfessorDesc
+ProfessorDesc[X]
+
+## YeomanName
+Yeoman[X]
+
+## YeomanDesc
+YeomanDesc[X]
+

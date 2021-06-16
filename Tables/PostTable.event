@@ -1,0 +1,5 @@
+//for things touching csvs after the fact
+
+//these for contrived EA behavioral reasons
+#define ChapterDataTable ChTable
+

@@ -1,0 +1,298 @@
+
+# 0x0002 textWeaponRankIncreasedTo
+ Weapon rank increased to [X]
+
+# 0x0094
+HP Bars[.][X]
+
+# 0x00B2
+Set health bar display[X]
+
+# 0x160 PrologueChName
+Boss Rush[X]
+
+#0x3A LearnedSkillText
+//first text ID in the free block
+Learned  [X]
+
+#0xd4c LikesText
+//first text ID in the free block
+Likes:[X]
+
+#0xd4d DislikesText
+[0x9E]i[0x90]li[0x8A][0x85][0x90]:[X]
+
+#0xd4e HeightText
+Height:[X]
+
+#0xd4f AgeText
+Age:[X]
+
+## HouseText
+//first text ID in the free block
+[MidRight][LoadFace][CurrentPortrait]Nothing to see here.[A][X]
+
+## VillageText
+[MidRight][LoadFace][0xFF][0xFF]These look useful.[A][X]
+
+## DV1Desc
+Freeze all enemies[N]
+for one turn[X]
+
+## nameCamus
+//for identity problems
+Camus[X]
+
+## nameSirius
+Sirius[X]
+
+## nameZeke
+Zeke[X]
+
+## StairsNameText
+ Stairs[X]
+
+## StairsDescText
+Take this staircase to[N]
+the connecting end.[X]
+
+## StairsBlockedText
+The staircase is blocked[N]
+from the other side.[X]
+
+## RaidNameText
+ Raid[X]
+
+## RaidDescText
+Destroy this village[N]
+for items and gold.[X]
+
+## EscapeName
+ Escape[X]
+
+## EscapeDesc
+Have this unit[N]
+leave this chapter.[X]
+
+## ArriveName
+ Arrive[X]
+
+## ArriveDesc
+Complete this chapter[N]
+by having this unit arrive.[X]
+
+## LordMustEscapeLastText
+This unit must escape last.[X]
+
+## Mov_Text_ID
+Mov[X]
+
+## EmptyHouseText
+[OpenMidRight][LoadFace][CurrentPortrait]
+Nothing here[Beat][A][X]
+
+## PrepScreenUseSkillScroll
+ Skill learned[X]
+
+## SkillScrollDesc
+A scroll that teaches[N]
+a skill when used.[X]
+
+## AumName
+Aum[X]
+
+## AumDesc
+Revives a dead ally.[X]
+
+## SmeName
+Smethlyn[X]
+
+## QuilavaName
+Quilava[X]
+
+## LightRuneName
+Light Rune[X]
+
+## UM_Torch
+ Torch[X]
+
+## UM_TorchDesc
+Turn the torch[N]
+on or off.[X]
+
+## SwarpName
+Swarp[X]
+
+## SwarpDesc
+S W A R P[X]
+
+## MessageFatigueRestored
+Fatigue restored[X]
+
+## LaguzMSSName
+Trs[X]
+
+## DonateToCirclesText
+Donate to Circles[X]
+
+## HolyBloodText
+Bld[X]
+
+## AHolyBloodName
+Donate[X]
+
+## AHolyBloodDesc
+Donate to Circles[X]
+
+##UM_Refuge
+ Refuge[X]
+ 
+##UM_RefugeDesc
+Take refuge with target.[X]
+
+## FatigueLabelText
+Ftg[X]
+
+## FatigueDesc
+How tired this unit is.[N]
+Can't deploy if bar is full,[N]
+but resets when undeployed.[X]
+
+## BowgunName
+Bowgun[X]
+
+## ShopUnitTickerText
+Select a unit to shop with.[X]
+
+## UM_Transform
+ Transform[X]
+ 
+## UM_TransformDesc
+Transform[X]
+
+## UM_UnitShop
+ Shop[X]
+ 
+## UM_UnitShopDesc
+Unit Shop[X]
+
+## RefugeScrollText
+Select a unit to take refuge with.[X]
+
+## ClawName
+Claw[X]
+
+## ClawDesc
+[X]
+ 
+## DemiBandName
+Demi Band[X]
+
+## DemiBandDesc
+Allows wielder to halfshift.[X]
+
+## LaguzBandName
+Laguz Band[X]
+
+## LaguzBandDesc
+Allows wielder to always[N]
+be transformed.[X]
+
+## OliviGrassName
+Olivi Grass[X]
+
+## OliviGrassDesc
+Fills some bar[N]
+when used.[X]
+
+## LaguzStoneName
+Laguz Stone[X]
+
+## LaguzStoneDesc
+Fills bar and[N]
+auto-transforms.[X]
+
+## LaguzWTypeText
+Laguz[X]
+
+## MorshuShopEntryText
+Lamp oil? Rope?[N]
+Bombs? You want it?[A][2NL]
+It's yours, my friend![N]
+As long as you[A][2NL]
+have enough gold.[N]
+[Buy/Sell][X]
+
+
+## MorshuShopCannotBuyText
+Sorry, bud. I can't give credit![A][2NL]
+Come back when you're[N]
+a little, mmm... richer![A][X]
+
+
+## MorshuName
+Morshu[X]
+
+## MorshuDesc
+A merchant from a far-off land.[X]
+
+## MineName
+Mine[X]
+
+## MineDesc
+A trap that damages units[N]
+that step on it.[X]
+
+## MineUseDesc
+Units that enter[N]
+spaces where these[N]
+are take damage.[X]
+
+## LightRuneDesc
+A device that blocks units[N]
+from entering spaces.[X]
+
+## LightRuneUseDesc
+Units cannot enter[N]
+spaces where these[N]
+have been placed.[X]
+
+## EscapeText
+Escape[X]
+
+## ArriveText
+Arrive[X]
+
+## PrepareText
+Prepare[X]
+
+## UM_Debug
+ Debug[X]
+ 
+## UMText_Win
+ Win[X]
+ 
+## UMDesc_Win
+Win the chapter.[X]
+
+#include "statscreen_text.txt"
+
+#include "unitmenu_text.txt"
+
+#include "char_text.txt"
+
+#include "class_text.txt"
+
+#include "item_text.txt"
+
+#include "holyblood_text.txt"
+
+#include "status_text.txt"
+
+#include "skilldesc_text.txt"
+
+#include "soundroom_text.txt"
+
+#include "unitinfo_text.txt"
+
+#include "chapter_text/_chapter_text.txt"

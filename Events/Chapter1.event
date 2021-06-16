@@ -1,0 +1,113 @@
+EventPointerTable(Ch1EventsID, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+Seize(2,6)
+Village(7,VillageEvent,17,5)
+Vendor(VendorList,15,3)
+Armory(ArmoryList,15,4)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Marth Lord 0 Level(15,Ally,0) [14,7] 0 0 0 1 [Rapier,Elixir] NoAI
+UNIT Eyvel Swordmaster_F 0 Level(2,Ally,0) [14,4] 0 0 0 1 [KillingEdge] NoAI
+UNIT Ranulf CatLaguzUntransformed 0 Level(12,Ally,0) [16,6] 0 0 0 1 [ClawCat] NoAI
+UNIT Lethe CatLaguzUntransformed_F 0 Level(12,Ally,0) [18,6] 0 0 0 1 [ClawCat] NoAI
+UNIT Ethlyn Troubadour 0 Level(17,Ally,0) [15,9] 0 0 0 1 [Mend,Enfeeble] NoAI
+UNIT Palla PegasusKnight 0 Level(16,Ally,0) [18,8] 0 0 0 1 [SlimLance,Javelin] NoAI
+UNIT Lukas Knight 0 Level(14,Ally,0) [12,6] 0 0 0 1 [IronLance,SteelLance] NoAI
+UNIT Tobin Archer 0 Level(15,Ally,0) [13,5] 0 0 0 1 [IronBow,Bowgun] NoAI
+UNIT
+
+EnemyUnits:
+UNIT Batta Brigand 0 Level(17,Enemy,0) [2,6] 0 0 0 1 [HandAxe] NeverMoveAI
+UNIT Ch1Generics Mercenary 0 Level(14,Enemy,1) [10,8] 0 0 0 1 [SteelBlade] AttackInRangeAI
+UNIT Ch1Generics Brigand 0 Level(15,Enemy,1) [8,6] 0 0 0 1 [IronAxe] AttackInRangeAI
+UNIT Ch1Generics Brigand 0 Level(15,Enemy,1) [8,7] 0 0 0 1 [IronAxe] AttackInRangeAI
+UNIT Ch1Generics Mercenary 0 Level(15,Enemy,1) [8,9] 0 0 0 1 [IronSword] AttackInRangeAI
+UNIT Ch1Generics Pirate 0 Level(14,Enemy,1) [12,11] 0 0 0 1 [SteelAxe] AttackInRangeAI
+UNIT Ch1Generics Pirate 0 Level(15,Enemy,1) [11,11] 0 0 0 1 [IronAxe] AttackInRangeAI
+UNIT Ch1Generics Brigand 0 Level(16,Enemy,1) [5,6] 0 0 0 1 [IronAxe] AttackInRangeAI
+UNIT Ch1Generics Brigand 0 Level(15,Enemy,1) [12,9] 0 0 0 1 [IronAxe] AttackInRangeAI
+UNIT Ch1Generics Mercenary 0 Level(16,Enemy,1) [4,7] 0 0 0 1 [IronBlade] AttackInRangeAI
+UNIT Ch1Generics Archer 0 Level(16,Enemy,1) [2,9] 0 0 0 1 [IronBow] AttackInRangeAI
+UNIT Ch1Generics Archer 0 Level(15,Enemy,1) [0,7] 0 0 0 1 [SteelBow] AttackInRangeAI
+UNIT Ch1Generics Archer 0 Level(16,Enemy,1) [6,10] 0 0 0 1 [IronBow] AttackInRangeAI
+UNIT Ch1Generics Myrmidon 0 Level(17,Enemy,1) [2,2] 0 0 0 1 [KillingEdge] AttackInRangeAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+
+LOAD1 0 Units1
+ENUN
+LOAD1 0 EnemyUnits
+ENUN
+
+FADU 10
+
+GiveGold(10000)
+
+NoFade
+ENDA
+
+
+EndingScene:
+MNC2 Ch2ChID
+NoFade
+ENDA
+
+
+VillageEvent:
+GiveItemWithDurability(SkillScroll,GlaciesID,0xFFFF)
+NoFade
+ENDA
+
+
+VendorList:
+SHLI Heal Mend Freeze HexingRod Vulnerary OliviGrass
+
+
+ArmoryList:
+SHLI IronSword SteelSword WindSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe
+

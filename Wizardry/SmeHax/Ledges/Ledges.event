@@ -1,0 +1,83 @@
+
+// simple system for height maps giving hit buffs/debuffs based on difference
+//goes in pre-battle calc loop
+
+#include "Ledges.lyn.event"
+
+ALIGN 4
+LedgeChapterList:
+BYTE W2ChID
+BYTE 0xFF //terminator
+
+ALIGN 4
+HeightMapTable:
+POIN W2HeightMap
+
+
+ALIGN 4
+W2HeightMap: //formatted like the maps in RAM are
+POIN W2HeightMap_Row1 W2HeightMap_Row2 W2HeightMap_Row3 W2HeightMap_Row4 W2HeightMap_Row5 W2HeightMap_Row6 W2HeightMap_Row7 W2HeightMap_Row8 W2HeightMap_Row9 W2HeightMap_Row10 W2HeightMap_Row11 W2HeightMap_Row12 W2HeightMap_Row13 W2HeightMap_Row14 W2HeightMap_Row15 W2HeightMap_Row16 W2HeightMap_Row17 W2HeightMap_Row18 W2HeightMap_Row19 W2HeightMap_Row20 W2HeightMap_Row21
+
+W2HeightMap_Row1:
+BYTE 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+
+W2HeightMap_Row2:
+BYTE 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+
+W2HeightMap_Row3:
+BYTE 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+
+W2HeightMap_Row4:
+BYTE 3 3 3 3 2 1 1 1 1 1 2 3 3 3 3
+
+W2HeightMap_Row5:
+BYTE 3 3 3 3 2 1 1 1 1 1 2 3 3 3 3
+
+W2HeightMap_Row6:
+BYTE 3 3 3 3 3 3 0 0 0 3 3 3 3 3 3
+
+W2HeightMap_Row7:
+BYTE 3 3 3 2 2 2 0 0 0 2 2 2 3 3 3
+
+W2HeightMap_Row8:
+BYTE 3 3 3 1 1 1 0 0 0 1 1 1 3 3 3
+
+W2HeightMap_Row9:
+BYTE 3 3 3 1 0 0 0 0 0 0 0 1 3 3 3
+
+W2HeightMap_Row10:
+BYTE 3 3 3 1 0 0 0 2 0 0 0 1 3 3 3
+
+W2HeightMap_Row11:
+BYTE 3 3 3 1 0 0 0 1 0 0 0 1 3 3 3
+
+W2HeightMap_Row12:
+BYTE 3 3 3 1 0 0 0 0 0 0 0 1 3 3 3
+
+W2HeightMap_Row13:
+BYTE 3 3 3 1 0 0 0 0 0 0 0 1 3 3 3
+
+W2HeightMap_Row14:
+BYTE 3 3 3 1 0 0 0 0 0 0 0 1 3 3 3
+
+W2HeightMap_Row15:
+BYTE 3 3 3 1 0 0 0 0 0 0 0 1 3 3 3
+
+W2HeightMap_Row16:
+BYTE 3 3 3 1 0 0 0 2 0 0 0 1 3 3 3
+
+W2HeightMap_Row17:
+BYTE 3 3 3 1 0 0 0 1 0 0 0 1 3 3 3
+
+W2HeightMap_Row18:
+BYTE 2 2 2 1 0 0 0 0 0 0 0 1 2 2 2
+
+W2HeightMap_Row19:
+BYTE 1 1 1 1 0 0 0 0 0 0 0 1 1 1 1
+
+W2HeightMap_Row20:
+BYTE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+W2HeightMap_Row21:
+BYTE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+

@@ -1,0 +1,556 @@
+#define FreeSpace 0x1000000
+#define FreeSpaceBLRange 0x1c1ec0
+
+#define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
+#define ChapterTileAnims(chapter, anim1, anim2) "PUSH; ORG 0x8b0890 + (148* chapter) + 9; BYTE anim1 anim2; POP"
+
+#ifndef DebuffTable
+  #define DebuffTable     0x0203F100
+  #define DebuffTableSize 0x00000900
+#endif
+
+#define LunarBrace MoonBracelet
+#define SolarBrace SunBracelet
+
+
+
+
+// #define __DEBUG__
+
+// Attribute for defining items with passive stat bonuses
+#define PASSIVE_ITEM_BOOSTS_ATTR 0x00800000
+
+// this is for if you use the legacy way of define item attributes in your table (this is for byte 3)
+// (which is sadly what the included table also does TODO: fix that)
+#define PassiveBoosts 0x80
+
+#define StatBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB,MovB,ConB) "BYTE HPB StrB SklB SpdB DefB ResB LckB MovB ConB MagB 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0"
+
+#define GrowthBonus(HPB,StrB,MagB,SklB,SpdB,DefB,ResB,LckB) "BYTE 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 0x0 HPB StrB SklB SpdB DefB ResB LckB MagB 0x0 0x0"
+
+#include "Wizardry/SkillSystem/skill_definitions.event"
+#include "Sound/_SoundDefinitions.event"
+
+ #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+
+//Useful macros
+#define GiveItem(Item,Character) "CALL $591F40; SMOV 0x3 Item ; GIVEITEMTO Character"
+#define GiveGold(money) "SVAL 0x3 money; GIVEITEMTOMAIN 0"
+#define EndConvo "CALL $9EE2C4"
+#define ClearAllUnits "CLEA 0x0; CLEE 0x0; CLEN 0x0"
+#define FadeOutMusic "MUSCMID 0x7FFF"
+#define ScrollBoxText(textID) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textID; TEXTEND; REMA"
+#define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
+#define MakeSuspendSave "ASMC 0xB5D5D"
+//End of useful macros
+
+
+//char defs
+
+//playables
+
+//ch1 - funny marth embarks seize map
+#define Marth		1	//Lord (Lord) (Archanea)
+#define Eyvel		2	//Swordmaster (Jagen) (Jugdral)
+#define Ranulf		3	//Cat Laguz (cav equivalent) (Tellius)
+#define Lethe		4	//Cat Laguz (cav equivalent) (Tellius)
+#define Ethlyn		5	//Troubadour (Healer) (Jugdral)
+#define Palla		6	//Pegasus Knight (Pegasus Knight) (Archanea)
+#define Lukas		7	//Knight (Armor) (Valentia)
+#define Tobin		8	//Archer (Archer) (Valentia)
+
+//ch2 - silly thracia jail escape map
+#define Linhardt	9	// Mage (Mage) (Fodlan)
+#define Owain 		10	// Myrmidon (Myrmidon) (Ylisse)
+#define Kagero 		11	// Thief (Thief) (Fates)
+#define Lucius 		12	// Monk (Mage) (Elibe)
+#define Marianne 	13	// (Pegasus Knight) (Fodlan)
+#define Oswin 		14	// General (Axe Armor) (Also the Boss) (Elibe)
+
+//ch3 - humorous fog of war defend map
+#define Echidna 	15	// Hero (Infantry) (Elibe)
+#define Titania 	16	// Paladin (Mounted) (Tellius)
+#define Delthea 	17	// Mage (Est) (Valentia)
+#define Luthier 	18	// Mage (Mage) (Valentia)
+#define Vika 		18	// Raven (peg equivalent) (Tellius)
+#define Silque 		19	// Bishop (Healer) (Valentia)
+#define Anna		20	// Transporter (Mobile Shop) (N/A)
+
+//ch4 - hilarious final map
+#define Nagi		21	//Manakete (Gotoh) (Archanea)
+
+//Palla, Marianne, and Vika get a triangle attack 
+
+
+//bosses
+#define Batta	64	//Brigand (Elibe)
+#define Gharnef 65	//Druid (Archanea)
+#define Medeus 	66	//Dragon (Archanea)
+
+//generics
+#define Ch1Generics 96
+#define Ch2Generics 97
+#define Ch3Generics 98
+#define Ch4Generics 99	
+
+//neutrals
+
+
+//mug defs
+
+
+//class defs
+#define Lord						1	//lv30 cap
+#define CatLaguzUntransformed 		128
+#define CatLaguzUntransformed_F 	129
+#define CatLaguzTransformed 		130
+#define CatLaguzTransformed_F 		131
+
+//items
+#define SkillScroll 0xBB
+#define Bowgun 		0xBC
+#define ClawCat 	0xBD
+#define Swarp 		0xBE
+#define Aum 		0xBF
+#define Enfeeble 	0xC0
+#define Haste 		0xC1
+#define Slow 		0xC2
+#define HexingRod 	0xC3
+#define Regen 		0xC4
+#define Freeze 		0xC5
+#define OliviGrass	0xC6
+#define LaguzStone	0xC7
+
+//Chapter ID defs
+
+#define Ch1ChID	0
+#define Ch2ChID	1
+#define Ch3ChID	2
+#define Ch4ChID	3
+
+//Global flag defs
+
+#define UnlockGuideFlag			0	//this will disable the guide entirely
+
+#define EyvelCapturedFlag		139
+#define RanulfCapturedFlag		140
+#define LetheCapturedFlag		141
+#define EthlynCapturedFlag		142
+#define PallaCapturedFlag		143
+#define LukasCapturedFlag		144
+#define TobinCapturedFlag		145
+#define LinhardtCapturedFlag	146
+#define OwainCapturedFlag 		147
+#define KageroCapturedFlag 		148
+#define LuciusCapturedFlag 		149
+#define MarianneCapturedFlag 	150
+#define OswinCapturedFlag 		151
+
+
+//180 is normally the first guide flag, it's now the start of a very large free block
+
+//BGs
+
+#define BlankBG 0x35
+
+
+
+
+//Definitions for Holy Blood presets
+
+//Example entry that i'm not removing
+#define ExampleBlood 0
+
+//Archanea
+#define AnriBlood 1 
+#define AlteaBlood AnriBlood //Alias
+#define AdrahBlood 2 
+#define ArchaneaBlood AdrahBlood //Alias
+#define JiolBlood 3 
+#define GraBlood JiolBlood //Alias
+#define MarlonBlood 4 
+#define AurelisBlood MarlonBlood //Alias
+#define IoteBlood 5 
+#define MacedonBlood IoteBlood //Alias
+#define MostynBlood 6 
+#define TalysBlood MostynBlood //Alias
+#define MedeusBlood 7 
+#define DolhrBlood MedeusBlood //Alias
+
+//Valentia
+#define RigelBlood 8
+#define DumaBlood RigelBlood //Alias
+#define ZofiaBlood 9
+#define MilaBlood ZofiaBlood //Alias
+
+//Jugdral
+#define BaldrBlood 10
+#define OdBlood 11
+#define DainnBlood 12
+#define UlirBlood 13
+#define BragiBlood 14
+#define ThrudBlood 15
+#define FjalarBlood 16
+#define HezulBlood 17
+#define NjorunBlood 18
+#define NeirBlood 19
+#define NagaBlood 20
+#define ForsetiBlood 21
+#define LoptousBlood 22
+
+//Ylisse
+#define GrimaBlood 23
+
+//Elibe
+#define HartmutBlood 24
+#define BernBlood HartmutBlood //Alias
+#define RolandBlood 25
+#define LyciaBlood RolandBlood //Alias
+#define BariganBlood 26
+#define IliaBlood BariganBlood //Alias
+#define DurbanBlood 27
+#define WesternIslesBlood DurbanBlood //Alias
+#define HanonBlood 28
+#define SacaeBlood HanonBlood //Alias
+#define ElimineBlood 29
+#define EtruriaBlood ElimineBlood //Alias
+#define AthosBlood 30
+#define BrammimondBlood 31
+
+//Magvel
+#define RenaisBlood 32
+#define GradoBlood 33
+#define FreliaBlood 34
+#define JehannaBlood 35
+#define LatonaBlood 36
+#define RaustenBlood LatonaBlood //Alias
+#define FomortiisBlood 37
+#define DemonKingBlood FomortiisBlood //Alias
+
+//Tellius
+#define BegnionBlood 38
+#define SephiranBlood BegnionBlood //Alias
+#define CrimeaBlood 39
+#define DaeinBlood 40
+#define GalliaBlood 41
+#define GoldoaBlood 42
+#define DheginseaBlood GoldoaBlood //Alias
+#define PhoenicisBlood 43
+#define HorusBlood PhoenicisBlood //Alias
+#define KilvasBlood 44
+#define SerenesBlood 45
+#define HeronBlood SerenesBlood //Alias
+#define HatariBlood 46
+#define AsheraBlood 47
+#define YuneBlood 48
+
+//Fateslandia
+#define DragonBlood 49
+
+//Fodlan
+#define ErnestBlood 50
+#define CrestOfErnest ErnestBlood //Alias
+#define MacuilBlood 51
+#define CrestOfMacuil MacuilBlood //Alias
+#define SeirosBlood 52
+#define CrestOfSeiros SeirosBlood //Alias
+#define DominicBlood 53
+#define CrestOfDominic DominicBlood //Alias
+#define FraldariusBlood 54
+#define CrestOfFraldarius FraldariusBlood //Alias
+#define NoaBlood 55
+#define CrestOfNoa NoaBlood //Alias
+#define CethleannBlood 56
+#define CrestOfCethleann CethleannBlood //Alias
+#define DaphnelBlood 57
+#define CrestOfDaphnel DaphnelBlood //Alias
+#define BlaiddydBlood 58
+#define CrestOfBlaiddyd BlaiddydBlood //Alias
+#define GloucesterBlood 59
+#define CrestOfGloucester GloucesterBlood //Alias
+#define GonerilBlood 60
+#define CrestOfGoneril GonerilBlood //Alias
+#define CicholBlood 61
+#define CrestOfCichol CicholBlood //Alias
+#define AubinBlood 62
+#define CrestOfAubin AubinBlood //Alias
+#define ChevalierBlood 63
+#define CrestOfChevalier ChevalierBlood //Alias
+#define IndechBlood 64
+#define CrestOfIndech IndechBlood //Alias
+#define BeastBlood 65
+#define MauriceBlood BeastBlood //Alias
+#define CrestOfTheBeast BeastBlood //Alias
+#define CrestOfMaurice BeastBlood //Alias
+#define CharonBlood 66
+#define CrestOfCharon CharonBlood //Alias
+#define TimotheosBlood 67
+#define CrestOfTimotheos TimotheosBlood //Alias
+#define RieganBlood 68
+#define CrestOfRiegan RieganBlood //Alias
+#define GautierBlood 69
+#define CrestOfGautier GautierBlood //Alias
+#define LamineBlood 70
+#define CrestOfLamine LamineBlood //Alias
+#define FlamesBlood 71
+#define CrestOfFlames FlamesBlood //Alias
+
+//Utility Defs
+#define NoBlood 0xFF
+#define IsMajor 0x80
+
+//Compatibility Hacks
+//HP Bars
+#define USE_HP_BARS
+
+//My Hacks
+//Animation Forcer
+#define USE_ANIMATION_FORCER
+
+//Aum
+#define USE_AUM
+
+//Biorhythm
+#define USE_BIORHYTHM
+
+//Cannot Crit
+#define USE_CANNOT_CRIT
+
+//Dancer Music
+#define USE_DANCER_MUSIC
+
+//Dancer Ring Refresh
+#define USE_DANCER_RING_REFRESH
+
+//Deny Stat Screen Access
+#define USE_DENY_STAT_SCREEN_ACCESS
+
+//Escape/Arrive
+#define USE_ESCAPE_ARRIVE
+
+//Fatigue
+#define USE_FATIGUE
+
+//Fixed Damage Weapons
+#define USE_FIXED_DAMAGE_WEAPONS
+
+//Holy Blood
+#define USE_HOLY_BLOOD
+
+//Item-Specific WTA
+#define USE_ITEM_SPECIFIC_WTA
+
+//Laguz Bars
+#define USE_LAGUZ_BARS
+
+//Magic Sword Rework (this option is overridden by Str/Mag split)
+#define USE_MAGIC_SWORD_REWORK
+
+//Modular Changing Battle BGM
+#define USE_CHANGING_BATTLE_BGM
+
+//More Shop Music
+#define USE_MORE_SHOP_MUSIC
+
+//No Countering
+#define USE_NO_COUNTERING
+
+//NosResire
+#define USE_NOS_RESIRE
+
+//Reaver Split
+#define USE_REAVER_SPLIT
+
+//Refuge
+#define USE_REFUGE
+
+//More Shop Types
+#define USE_MORE_SHOPS
+
+//Shop Unit
+#define USE_SHOP_UNIT
+
+//Split Promo Items
+#define USE_SPLIT_PROMO_ITEMS
+
+//Status Expansion
+#define USE_STATUS_EXPANSION
+
+//Status Weapons
+#define USE_STATUS_WEAPONS
+
+//Swarp 
+#define USE_SWARP
+
+//Trap Rework
+#define USE_TRAP_REWORK
+
+//Weapon Lock Array
+#define USE_WEAPON_LOCK_ARRAY
+
+
+//event ptr table defs
+
+#define Ch1EventsID 0x7
+#define Ch2EventsID 0xA
+#define Ch3EventsID 0xD
+#define Ch4EventsID 0x14
+#define Ch5EventsID 0x17
+#define Ch6EventsID 0x1E
+#define Ch7EventsID 0x21
+#define Ch8EventsID 0x24
+#define Ch9EventsID 0x27
+#define Ch10EventsID 0x2A
+#define Ch11EventsID 0x2D
+#define Ch12EventsID 0x33
+#define Ch13EventsID 0x37
+#define Ch14EventsID 0x3B
+
+#define Ch1MapID 0x4
+#define Ch1MapChangesID 0x6
+#define Ch2MapID 0x8
+#define Ch2MapChangesID 0x9
+#define Ch3MapID 0xB
+#define Ch3MapChangesID 0xC
+#define Ch4MapID 0x11
+#define Ch4MapChangesID 0x13
+#define Ch5MapID 0x15
+#define Ch5MapChangesID 0x16
+#define Ch6MapID 0x1B
+#define Ch6MapChangesID 0x1D
+#define Ch7MapID 0x1F
+#define Ch7MapChangesID 0x20
+#define Ch8MapID 0x22
+#define Ch8MapChangesID 0x23
+#define Ch9MapID 0x25
+#define Ch9MapChangesID 0x26
+#define Ch10MapID 0x28
+#define Ch10MapChangesID 0x29 
+#define Ch11MapID 0x2B
+#define Ch11MapChangesID 0x2C
+#define Ch12MapID 0x31
+#define Ch12MapChangesID 0x32
+#define Ch13MapID 0x35
+#define Ch13MapChangesID 0x36
+#define Ch14MapID 0x39
+#define Ch14MapChangesID 0x3A
+
+
+//this is probably the third time i've done these with the thought of "oh I only have to do this once then I'll have them whenever I need them in the future"
+
+#define PlainsObjType 0x1
+#define PlainsTileConfig 0x3
+#define PlainsAnims 0x5
+
+#define PlainsPalette1 0x2
+#define PlainsPalette2 0x38
+#define PlainsPalette3 0x4C
+#define PlainsPalette4 0x5B
+
+#define VillageObjType 0xE
+#define VillageTileConfig 0x10
+#define VillageAnims 0x12
+
+#define VillagePalette1 0xF
+#define VillagePalette2 0x72
+#define VillagePalette3 0xEA
+
+#define CastleObjType 0x18
+#define CastleTileConfig 0x1A
+#define CastleAnims 0x1C
+
+#define CastlePalette1 0x19
+#define CastlePalette2 0x48
+#define CastlePalette3 0x57
+#define CastlePalette4 0xB9
+
+#define FieldsObjType 0x2E
+#define FieldsTileConfig 0x30
+#define FieldsAnims 0x5 
+
+#define FieldsPalette1 0x2F
+#define FieldsPalette2 0x34
+
+#define FortObjType 0x3C
+#define FortTileConfig 0x3E
+#define FortAnims 0x0
+
+#define FortPalette1 0x3D
+#define FortPalette2 0x68
+#define FortPalette3 0xCE
+
+#define DesertObjType 0x42
+#define DesertTileConfig 0x44
+#define DesertAnims 0x5
+
+#define DesertPalette1 0x43
+
+#define LavaObjType 0x50
+#define LavaTileConfig 0x52
+#define LavaAnims 0x0
+#define LavaAnims2 0x54
+
+#define LavaPalette1 0x51
+
+#define TempleObjType 0x5F
+#define TempleTileConfig 0x61
+#define TempleAnims 0x0
+
+#define TemplePalette1 0x60
+
+#define StrongholdObjType 0x79
+#define StrongholdTileConfig 0x7B
+#define StrongholdAnims 0x7D
+
+#define StrongholdPalette1 0x7A
+#define StrongholdPalette2 0xE6
+
+#define MountainousObjType 0x6C
+#define MountainousTileConfig 0x6E
+#define MountainousAnims 0x5
+
+#define MountainousPalette1 0x6D
+#define MountainousPalette2 0xA3
+
+#define ValniObjType 0x88
+#define ValniTileConfig 0x8A
+#define ValniAnims 0x9D
+
+#define ValniPalette1 0x89
+
+
+
+#define CastlePalette5 0x8B
+#define CastlePalette6 0x8C
+
+#define CaveTileConfig 0x8D
+#define CaveObjType 0x8E
+
+#define CavePalette1 0x8F
+#define CavePalette2 0x90
+
+#define DesertBastionTileConfig 0x91
+#define DesertBastionObjType 0x92
+
+#define DesertBastionPalette1 0x93
+
+#define PlainsPalette5 0x94
+#define PlainsPalette6 0x95
+
+#define LavaPalette2 0x96
+
+#define SnowCastleObjType 0x97
+#define SnowCastleTileConfig 0x98
+
+#define SnowCastlePalette1 0x99
+
+#define SnowFieldsObjType 0x9A
+#define SnowFieldsTileConfig 0x9B
+
+#define SnowFieldsPalette1 0x9C
+
+#define NESFEObjType 0x9E
+#define NESFEPalette1 0x9F
+#define NESFETileConfig 0xA0
+#define NESFEAnims 0xA1
+#define NESFEPalette2 0xA2

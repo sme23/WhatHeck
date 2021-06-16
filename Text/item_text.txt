@@ -1,0 +1,17 @@
+## IronKnifeName
+Iron Knife[X]
+
+## IronKnifeDesc
+[.][X]
+
+## SteelKnifeName
+Steel Knife[X]
+
+## SteelKnifeDesc
+[.][X]
+
+## SilverKnifeName
+Silver Knife[X]
+
+## SilverKnifeDesc
+[.][X]

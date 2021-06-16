@@ -1,0 +1,10 @@
+#include "ASMC Check Installer.event"
+#include "death.lyn.event"
+#include "ClearConvoy.lyn.event"
+#include "MakeShopASMC.lyn.event"
+#include "CheckTileChange.lyn.event"
+
+ALIGN 4
+ChangeWeaponRankASMC:
+#incbin "ChangeWeaponRankASMC.dmp"
+
