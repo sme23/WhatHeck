@@ -99,7 +99,7 @@ Quickly Difficult (Puyo Puyo Tsuu)[X]
 One-Winged Angel (FF7)[X]
 
 ## SongName_NeverGonnaGiveYouUp *
-Never Gonna Give You Up[X]
+Stage 1 (Battletoads Wii)[X]
 
 ## SongName_RaveInTheGrave *
 Rave in the Grave (Shantae)[X]

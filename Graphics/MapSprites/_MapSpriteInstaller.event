@@ -60,6 +60,29 @@ POP
 
 StandingMapSprite(SigilMapSpriteID,MapSprite16x16,SigilMapSprite)
 
+MovingMapSprite(CatLaguzUntransformed,$201338,$200C54)
+MovingMapSprite(CatLaguzUntransformed_F,$201B84,$201490)
+MovingMapSprite(CatLaguzTransformed,$1F5468,$1F4B18)
+MovingMapSprite(CatLaguzTransformed_F,$1F5468,$1F4B18)
+MovingMapSprite(RavenLaguzUntransformed,$1E39EC,$1E308C)
+MovingMapSprite(RavenLaguzTransformed,$1FA2B4,$1F974C)
+MovingMapSprite(RavenLaguzTransformed_F,$1FA2B4,$1F974C)
+
+StandingMapSprite(ThiefFStandingMapSpriteID,MapSprite16x16,ThiefF_S)
+MovingMapSprite(Thief_F,ThiefF_AP,ThiefF_M)
+
+StandingMapSprite(EarthDragonStandingMapSpriteID,MapSprite16x32,EarthDragon_S)
+MovingMapSprite(EarthDragon,$1E2F34,EarthDragon_M)
+
+StandingMapSprite(MarthStandingMapSpriteID,MapSprite16x32,Marth_S)
+MovingMapSprite(Lord,$1C3D7C,Marth_M)
+
+StandingMapSprite(FFlyingLaguzUntrStandingMapSpriteID,MapSprite16x16,FRavenUntr_S)
+MovingMapSprite(RavenLaguzUntransformed_F,MapSprite16x16,FRavenUntr_M)
+
+
+StandingMapSprite(TransporterStandingMapSpriteID,MapSprite16x32,Transporter_S)
+MovingMapSprite(Transporter,$1C3D7C,Transporter_M)
 
 ALIGN 4
 ThiefF_S:
@@ -77,3 +100,34 @@ ALIGN 4
 SigilMapSprite:
 #incext Png2Dmp "Sigil.png" --lz77
 
+ALIGN 4
+EarthDragon_S:
+#incext Png2Dmp "EarthDragon_S.png" --lz77
+
+ALIGN 4
+EarthDragon_M:
+#incext Png2Dmp "EarthDragon_M.png" --lz77
+
+ALIGN 4
+FRavenUntr_S:
+#incext Png2Dmp "FRavenUntr_S.png" --lz77
+
+ALIGN 4
+FRavenUntr_M:
+#incext Png2Dmp "FRavenUntr_M.png" --lz77
+
+ALIGN 4
+Marth_S:
+#incext Png2Dmp "Marth_S.png" --lz77
+
+ALIGN 4
+Marth_M:
+#incext Png2Dmp "Marth_M.png" --lz77
+
+ALIGN 4
+Transporter_S:
+#incext Png2Dmp "Transporter_S.png" --lz77
+
+ALIGN 4
+Transporter_M:
+#incext Png2Dmp "Transporter_M.png" --lz77

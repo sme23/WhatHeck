@@ -153,6 +153,9 @@ Take refuge with target.[X]
 ## FatigueLabelText
 Ftg[X]
 
+## SeizeText
+Seize[X]
+
 ## FatigueDesc
 How tired this unit is.[N]
 Can't deploy if bar is full,[N]

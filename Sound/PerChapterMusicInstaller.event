@@ -49,5 +49,9 @@ POP
 
 
 BossMusicList:
+BossMusicEntry(Batta,FourHeroesBoss)
+BossMusicEntry(Oswin,BossBlockBall)
+BossMusicEntry(Gharnef,Battle2BoF2)
+BossMusicEntry(Medeus,LamentEcclesia)
 BossMusicEnd
 

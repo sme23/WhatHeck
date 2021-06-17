@@ -1,1 +1,11 @@
+## Ch1ChName
+1: Marth Embarks[X]
 
+## Ch2ChName
+2: The Dungeon[X]
+
+## Ch3ChName
+3: Despair and Hope[X]
+
+## Ch4ChName
+F: Chosen by Fate[X]

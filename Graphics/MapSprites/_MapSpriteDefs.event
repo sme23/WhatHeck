@@ -123,8 +123,8 @@
 
 #define ThiefFStandingMapSpriteID 107
 #define SigilMapSpriteID 0x66 //overwrites light rune
-#define MFlyingLaguzUntrStandingMapSpriteID 108
-#define FFlyingLaguzUntrStandingMapSpriteID 109
-#define RavenLaguzStandingMapSpriteID 110
-#define TransporterStandingMapSpriteID 112
+#define FFlyingLaguzUntrStandingMapSpriteID 108
+#define TransporterStandingMapSpriteID 109
+#define MarthStandingMapSpriteID 110
+#define EarthDragonStandingMapSpriteID 111
 
