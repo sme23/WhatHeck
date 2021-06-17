@@ -83,28 +83,63 @@
 
 
 //bosses
-#define Batta	64	//Brigand (Elibe)
-#define Gharnef 65	//Druid (Archanea)
-#define Medeus 	66	//Dragon (Archanea)
+#define Batta	71	//Brigand (Elibe)
+#define Gharnef 72	//Druid (Archanea)
+#define Medeus 	73	//Earth Dragon (Archanea)
 
 //generics
-#define Ch1Generics 96
-#define Ch2Generics 97
-#define Ch3Generics 98
-#define Ch4Generics 99	
+#define Ch1Generics 112
+#define Ch2Generics 113
+#define Ch3Generics 114
+#define Ch4Generics 115
 
 //neutrals
 
 
 //mug defs
 
+#define MarthMug	1
+#define EyvelMug	2
+#define RanulfMug	3
+#define LetheMug	4
+#define EthlynMug	5
+#define PallaMug	6
+#define LukasMug	7
+#define TobinMug	8
+#define LinhardtMug	9
+#define OwainMug	10
+#define KageroMug	11
+#define LuciusMug	12
+#define MarianneMug	13
+#define OswinMug	14
+#define EchidnaMug	15
+#define TitaniaMug	16
+#define DeltheaMug	17
+#define LuthierMug	18
+#define VikaMug		19
+#define SilqueMug	20
+#define AnnaMug		21
+#define NagiMug		22
+#define BattaMug	23
+#define GharnefMug	24
+#define MedeusMug	25
 
 //class defs
+
+#define Falcoknight	FalcoKnight
+
 #define Lord						1	//lv30 cap
 #define CatLaguzUntransformed 		128
 #define CatLaguzUntransformed_F 	129
 #define CatLaguzTransformed 		130
 #define CatLaguzTransformed_F 		131
+#define RavenLaguzUntransformed		132
+#define RavenLaguzUntransformed_F	133
+#define RavenLaguzTransformed		134
+#define RavenLaguzTransformed_F		135
+#define Thief_F						136
+#define EarthDragon					137
+#define Transporter					138
 
 //items
 #define SkillScroll 0xBB

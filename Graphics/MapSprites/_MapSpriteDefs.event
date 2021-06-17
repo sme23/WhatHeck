@@ -122,4 +122,9 @@
 #define DeadPeerStandingMapSpriteID 106
 
 #define ThiefFStandingMapSpriteID 107
-#define SigilMapSpriteID 0x66
+#define SigilMapSpriteID 0x66 //overwrites light rune
+#define MFlyingLaguzUntrStandingMapSpriteID 108
+#define FFlyingLaguzUntrStandingMapSpriteID 109
+#define RavenLaguzStandingMapSpriteID 110
+#define TransporterStandingMapSpriteID 112
+

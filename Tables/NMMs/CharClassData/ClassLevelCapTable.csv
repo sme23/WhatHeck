@@ -1,6 +1,6 @@
 INLINE Class_Level_Cap_Table,Level Cap
 None,20
-Ephraim Lord,20
+Lord,30
 Eirika Lord,20
 Ephraim Master Lord,20
 Eirika Master Lord,20
@@ -127,56 +127,15 @@ Cyclops,20
 Elder Bael,20
 Journeyman (2),20
 Pupil (2),20
-"Cat Laguz (M, UT)",20
-"Cat Laguz (F, UT)",20
-"Lion Laguz (M, UT)",20
-"Lion Laguz (F, UT)",20
-"Tiger Laguz (M, UT)",20
-"Tiger Laguz (F, UT)",20
-"Wolf Laguz (M, UT)",20
-"Wolf Laguz (F, UT)",20
-"Hawk Laguz (M, UT)",20
-"Hawk Laguz (F, UT)",20
-"Raven Laguz (M, UT)",20
-"Raven Laguz (F, UT)",20
-"Heron Laguz (M, UT)",20
-"Heron Laguz (F, UT)",20
-"Red Dragon (M, UT)",20
-"Red Dragon (F, UT)",20
-"White Dragon (M, UT)",20
-"White Dragon (F, UT)",20
-"Black Dragon (M, UT)",20
-"Black Dragon (F, UT)",20
-"Cat Laguz (M, T)",20
-"Cat Laguz (F, T)",20
-"Lion Laguz (M, T)",20
-"Lion Laguz (F, T)",20
-"Tiger Laguz (M, T)",20
-"Tiger Laguz (F, T)",20
-"Wolf Laguz (M, T)",20
-"Wolf Laguz (F, T)",20
-"Hawk Laguz (M, T)",20
-"Hawk Laguz (F, T)",20
-"Raven Laguz (M, T)",20
-"Raven Laguz (F, T)",20
-"Heron Laguz (M, T)",20
-"Heron Laguz (F, T)",20
-"Red Dragon (M, T)",20
-"Red Dragon (F, T)",20
-"White Dragon (M, T)",20
-"White Dragon (F, T)",20
-"Black Dragon (M, T)",20
-"Black Dragon (F, T)",20
-Divine Dragon (U),20
-Earth Dragon (U),20
-Ice Dragon (U),20
-Mage Dragon (U),20
-Wyvern (U),20
-Divine Dragon (T),20
-Earth Dragon (T),20
-Ice Dragon (T),20
-Mage Dragon (T),20
-Wyvern (T),20
-Fire Dragon (U),20
-Fire Dragon (T),20
-dummy end marker,20
+Cat Laguz (Untransformed),30
+Cat Laguz (Untransformed) (F),30
+Cat Laguz (Transformed),30
+Cat Laguz (Transformed) (F),30
+Raven Laguz (Untransformed),30
+Raven Laguz (Untransformed) (F),30
+Raven Laguz (Transformed),30
+Raven Laguz (Transformed) (F),30
+Thief (F),20
+Earth Dragon,20
+Transporter,20
+dummy end marker,0

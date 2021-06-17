@@ -37,6 +37,7 @@
     
     MESSAGE Used free space ends at currentOffset
 
+ALIGN 4
 WORD 0 0 0 0 0 0 0 0 0 0 0 0
 
 

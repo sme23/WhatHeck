@@ -1,25 +1,19 @@
 
-## ScholarName
-Scholar[X]
+## LaguzName
+Laguz[X]
 
-## ScholarDesc
-ScholarDesc[X]
+## LaguzDesc
+Beasts capable of limited[N]
+but powerful attacks.[X]
 
-## GreenhornName
-Greenhorn[X]
+## EarthDragonName
+Earth Dragon[X]
 
-## GreenhornDesc
-GreenhornDesc[X]
+## EarthDragonDesc
+A dragon of the Earth Tribe.[X]
 
-## ProfessorName
-Professor[X]
+## TransporterName
+Transporter[X]
 
-## ProfessorDesc
-ProfessorDesc[X]
-
-## YeomanName
-Yeoman[X]
-
-## YeomanDesc
-YeomanDesc[X]
-
+## TransporterDesc
+A mobile wagon containing supplies.[X]

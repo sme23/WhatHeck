@@ -21,3 +21,195 @@ Monster[X]
 
 ## MonsterDesc
 MonsterDesc[X]
+
+## MarthName
+Marth[X]
+
+## MarthDesc
+The prince of Altea.[X]
+
+## EyvelName
+Eyvel[X]
+
+## EyvelDesc
+she doesn't leave i promise[X]
+
+## RanulfName
+Ranulf[X]
+
+## RanulfDesc
+catboy[X]
+
+## LetheName
+Lethe[X]
+
+## LetheDesc
+catgirl[X]
+
+## EthlynName
+Ethlyn[X]
+
+## EthlynDesc
+Ethlyn[X]
+
+## PallaName
+Palla[X]
+
+## PallaDesc
+best whitewing[X]
+
+## LukasName
+Lukas[X]
+
+## LukasDesc
+will make you cheesecake[X]
+
+## TobinName
+Tobin[X]
+
+## TobinDesc
+shut up tobin[X]
+
+## LinhardtName
+Linhardt[X]
+
+## LinhardtDesc
+he's probably asleep[X]
+
+## OwainName
+Owain[X]
+
+## OwainDesc
+<redacted>[X]
+
+## KageroName
+Kagero[X]
+
+## KageroDesc
+ninjas are illegal[X]
+
+## LuciusName
+Lucius[X]
+
+## LuciusDesc
+good boye[X]
+
+## MarianneName
+Marianne[X]
+
+## MarianneDesc
+this is where she goes[N]
+if you don't recruit her[X]
+
+## OswinName
+Oswin[X]
+
+## OswinDesc
+dalswin[X]
+
+## EchidnaName
+Echidna[X]
+
+## EchidnaDesc
+here i come, rougher[N]
+than the rest of them[X]
+
+## TitaniaName
+Titania[X]
+
+## TitaniaDesc
+yes[X]
+
+## DeltheaName
+Delthea[X]
+
+## DeltheaDesc
+doot[X]
+
+## LuthierName
+Luthier[X]
+
+## LuthierDesc
+ryuto[X]
+
+## VikaName
+Vika[X]
+
+## VikaDesc
+she counts as a pegasus rider[X]
+
+## SilqueName
+Silque[X]
+
+## SilqueDesc
+thilque[X]
+
+## AnnaName
+Anna[X]
+
+## AnnaDesc
+where *isn't* she[X]
+
+## NagiName
+Nagi[X]
+
+## NagiDesc
+is she even canon[X]
+
+## BattaName
+Batta[X]
+
+## BattaDesc
+you think you can[N]
+stand up to him?[X]
+
+## GharnefName
+Gharnef[X]
+
+## GharnefDesc
+you think you can[N]
+win against him?[X]
+
+## MedeusName
+Medeus[X]
+
+## MedeusDesc
+the final boss is[N]
+always a dragon[X]
+
+## Ch1GenericsName
+Bandit[X]
+
+## Ch1GenericsDesc
+batta's bandits[X]
+
+## Ch2GenericsName
+Thracian[X]
+
+## Ch2GenericsDesc
+in america[X]
+
+## Ch3GenericsName
+Daein[X]
+
+## Ch3GenericsDesc
+weren't you just escaping[X]
+
+## Ch4GenericsName
+Dolhr[X]
+
+## Ch4GenericsDesc
+it's always dolhr[X]
+
+## DoorName
+Door[X]
+
+## WallName
+Wall[X]
+
+## SnagName
+Snag[X]
+
+## EnemyName
+Enemy[X]
+

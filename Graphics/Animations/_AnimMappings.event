@@ -594,14 +594,24 @@ SwordAnim(FThiefSwordAnimID)
 UnarmedAnim(FThiefSwordAnimID)
 EndAnim
 
+
 ALIGN 4
-ScholarAnims:
-MagicAnim(ScholarMagicAnimID)
-UnarmedAnim(ScholarMagicAnimID)
+MarthLordAnims:
+
 EndAnim
 
 ALIGN 4
-GreenhornAnims:
-SwordAnim(GreenhornSwordAnimID)
-UnarmedAnim(GreenhornUnarmedAnimID)
+HeroFAnims:
+
 EndAnim
+
+ALIGN 4
+CatLaguzAnims:
+
+EndAnim
+
+ALIGN 4
+RavenLaguzAnims:
+
+EndAnim
+

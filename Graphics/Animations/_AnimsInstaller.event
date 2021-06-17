@@ -2,12 +2,4 @@
 {
 #include "Anims/FThief_Sword.event"
 }
-{
-#include "Anims/Scholar_Magic.event"
-}
-{
-#include "Anims/Greenhorn_Sword.event"
-}
-{
-#include "Anims/Greenhorn_Unarmed.event"
-}
+

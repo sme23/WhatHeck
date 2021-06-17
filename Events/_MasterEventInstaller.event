@@ -5,3 +5,21 @@
 {
 #include "KillOpening.event"
 }
+
+//chapter events
+
+{
+#include "Chapter1.event"
+}
+
+{
+//#include "Chapter2.event"
+}
+
+{
+//#include "Chapter3.event"
+}
+
+{
+//#include "Chapter4.event"
+}
