@@ -30,7 +30,7 @@ WORD 0x50B	//Light
 WORD 0x50C	//Dark
 WORD 0x50D	//Item
 WORD 0x50E	//Bllsta
-WORD 0x50F	//Dragon
+WORD LaguzWTypeText	//Laguz
 WORD 0x50F	//Dragon
 WORD 0x50F	//Dragon
 WORD 0x50F	//Dragon

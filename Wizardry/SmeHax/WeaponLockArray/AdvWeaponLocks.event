@@ -8,10 +8,32 @@ BYTE $00 $3C $3D $FF
 POP
 
 
-#inctext lyn "AdvWeaponLocks.elf"
+#include "AdvWeaponLocks.lyn.event"
 
 #define SoftCharLock 0
 #define HardCharLock 1
 #define SoftClassLock 2
 #define HardClassLock 3
 #define EndLockArray 0
+
+TestArray:
+BYTE HardClassLock
+BYTE EirikaLord
+BYTE Rogue
+BYTE EndLockArray
+
+
+ALIGN 4
+CatLaguzArray:
+BYTE HardClassLock
+BYTE CatLaguzTransformed 
+BYTE CatLaguzTransformed_F
+BYTE EndLockArray
+
+ALIGN 4
+RavenLaguzArray:
+BYTE HardClassLock
+BYTE RavenLaguzTransformed
+BYTE RavenLaguzTransformed_F
+BYTE EndLockArray
+

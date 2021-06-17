@@ -99,7 +99,7 @@
 	#ifdef ENABLE_PERSONAL_INFO
 	
 	  ORG $88690
-        jumpToHack(PageNumberCheck)	  
+     //   jumpToHack(PageNumberCheck)	  
 		
 	#endif // ENABLE_PERSONAL_INFO
 
@@ -173,9 +173,9 @@
       #include "pages/mss_page4_runa.lyn.event"
 	  
 	ALIGN 4
-    PageNumberCheck:
-      #include "asm/mss_threepageconditional.lyn.event"
-	  POIN PersonalDataTable
+   // PageNumberCheck:
+   //   #include "asm/mss_threepageconditional.lyn.event"
+	//  POIN PersonalDataTable
   
   #else // ENABLE_PERSONAL_INFO
   

@@ -10,6 +10,12 @@
 ALIGN 4
 LaguzClassList:
 BYTE Necromancer DemonKing
+
+BYTE CatLaguzUntransformed CatLaguzTransformed
+BYTE CatLaguzUntransformed_F CatLaguzTransformed_F
+BYTE RavenLaguzUntransformed RavenLaguzTransformed
+BYTE RavenLaguzUntransformed_F RavenLaguzTransformed_F
+
 BYTE 0 0 // terminator
 
 #ifdef LAGUZ_SKILLS

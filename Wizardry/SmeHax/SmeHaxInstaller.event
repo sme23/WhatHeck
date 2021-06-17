@@ -22,6 +22,8 @@
 #include "TrapRework/TrapRework.event"
 #include "StatusExpansion/StatusExpansion.event"
 //#include "Ledges/Ledges.event"
+#include "WeaponLockArray/AdvWeaponLocks.event"
+#include "Biorhythm/Biorhythm.event"
 
 
 #include "Swarp/Swarp.event"

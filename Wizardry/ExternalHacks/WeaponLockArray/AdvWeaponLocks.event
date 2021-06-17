@@ -24,4 +24,21 @@ BYTE EirikaLord
 BYTE Rogue
 BYTE EndLockArray
 
+
+ALIGN 4
+CatLaguzArray:
+BYTE HardClassLock
+BYTE CatLaguzTransformed 
+BYTE CatLaguzTransformed_F
+BYTE EndLockArray
+
+ALIGN 4
+RavenLaguzArray:
+BYTE HardClassLock
+BYTE RavenLaguzTransformed
+BYTE RavenLaguzTransformed_F
+BYTE EndLockArray
+
+
+
 #endif // ADV_WEAPON_LOCKS

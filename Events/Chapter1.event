@@ -45,8 +45,8 @@ END_MAIN
 Units1:
 UNIT Marth Lord 0 Level(15,Ally,0) [14,7] 0 0 0 1 [Rapier,Elixir] NoAI
 UNIT Eyvel Swordmaster_F 0 Level(2,Ally,0) [14,4] 0 0 0 1 [KillingEdge] NoAI
-UNIT Ranulf CatLaguzUntransformed 0 Level(12,Ally,0) [16,6] 0 0 0 1 [ClawCat] NoAI
-UNIT Lethe CatLaguzUntransformed_F 0 Level(12,Ally,0) [18,6] 0 0 0 1 [ClawCat] NoAI
+UNIT Ranulf CatLaguzUntransformed 0 Level(12,Ally,0) [18,6] 0 0 0 1 [ClawCat] NoAI
+UNIT Lethe CatLaguzUntransformed_F 0 Level(12,Ally,0) [16,6] 0 0 0 1 [ClawCat] NoAI
 UNIT Ethlyn Troubadour 0 Level(17,Ally,0) [15,9] 0 0 0 1 [Mend,Enfeeble] NoAI
 UNIT Palla PegasusKnight 0 Level(16,Ally,0) [18,8] 0 0 0 1 [SlimLance,Javelin] NoAI
 UNIT Lukas Knight 0 Level(14,Ally,0) [12,6] 0 0 0 1 [IronLance,SteelLance] NoAI
@@ -59,15 +59,15 @@ UNIT Ch1Generics Mercenary 0 Level(14,Enemy,1) [10,8] 0 0 0 1 [SteelBlade] Attac
 UNIT Ch1Generics Brigand 0 Level(15,Enemy,1) [8,6] 0 0 0 1 [IronAxe] AttackInRangeAI
 UNIT Ch1Generics Brigand 0 Level(15,Enemy,1) [8,7] 0 0 0 1 [IronAxe] AttackInRangeAI
 UNIT Ch1Generics Mercenary 0 Level(15,Enemy,1) [8,9] 0 0 0 1 [IronSword] AttackInRangeAI
-UNIT Ch1Generics Pirate 0 Level(14,Enemy,1) [12,11] 0 0 0 1 [SteelAxe] AttackInRangeAI
-UNIT Ch1Generics Pirate 0 Level(15,Enemy,1) [11,11] 0 0 0 1 [IronAxe] AttackInRangeAI
+UNIT Ch1Generics Pirate 0 Level(14,Enemy,1) [12,11] 0 0 0 1 [SteelAxe] NoAI
+UNIT Ch1Generics Pirate 0 Level(15,Enemy,1) [11,11] 0 0 0 1 [IronAxe] NoAI
 UNIT Ch1Generics Brigand 0 Level(16,Enemy,1) [5,6] 0 0 0 1 [IronAxe] AttackInRangeAI
 UNIT Ch1Generics Brigand 0 Level(15,Enemy,1) [12,9] 0 0 0 1 [IronAxe] AttackInRangeAI
 UNIT Ch1Generics Mercenary 0 Level(16,Enemy,1) [4,7] 0 0 0 1 [IronBlade] AttackInRangeAI
 UNIT Ch1Generics Archer 0 Level(16,Enemy,1) [2,9] 0 0 0 1 [IronBow] AttackInRangeAI
 UNIT Ch1Generics Archer 0 Level(15,Enemy,1) [0,7] 0 0 0 1 [SteelBow] AttackInRangeAI
-UNIT Ch1Generics Archer 0 Level(16,Enemy,1) [6,10] 0 0 0 1 [IronBow] AttackInRangeAI
-UNIT Ch1Generics Myrmidon 0 Level(17,Enemy,1) [2,2] 0 0 0 1 [KillingEdge] AttackInRangeAI
+UNIT Ch1Generics Archer 0 Level(16,Enemy,1) [6,10] 0 0 0 1 [IronBow] NoAI
+UNIT Ch1Generics Myrmidon 0 Level(17,Enemy,1) [3,3] 0 0 0 1 [KillingEdge] AttackInRangeAI
 UNIT
 
 Traps1:
