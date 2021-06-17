@@ -120,17 +120,8 @@ FILL 256
 #define SetStatusBlinkyIconFunc(statusID,funcPtr) "PUSH; ORG (BlinkyStatusIconJumpTable+(statusID*4)); POIN funcPtr; POP"
 
 
-#define NoStatusID 0
-#define PoisonStatusID 1
-#define SleepStatusID 2
-#define SilenceStatusID 3
-#define BerserkStatusID 4
-#define AtkRingStatusID 5
-#define DefRingStatusID 6
-#define CritRingStatusID 7
-#define AvoRingStatusID 8
-#define SickStatusID 9
-#define PetrifyStatusID 13
+
+
 
 SetStatusName(NoStatusID,0x536)
 SetStatusName(PoisonStatusID,0x514)

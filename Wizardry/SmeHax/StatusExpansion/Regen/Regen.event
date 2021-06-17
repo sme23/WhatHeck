@@ -1,5 +1,5 @@
 
-#define RegenStatusID 0x10
+
 
 SetStatusName(RegenStatusID,RegenStatusName)
 SetStatusDesc(RegenStatusID,RegenStatusDesc)

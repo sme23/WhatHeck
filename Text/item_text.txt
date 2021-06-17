@@ -1,17 +1,50 @@
-## IronKnifeName
-Iron Knife[X]
+## BowgunDesc
+An automatic bow that[N]
+deals consistent damage.[X]
 
-## IronKnifeDesc
-[.][X]
+## HasteName
+Haste[X]
 
-## SteelKnifeName
-Steel Knife[X]
+## HasteDesc
+Bless allies to let[N]
+them act twice a turn.[X]
 
-## SteelKnifeDesc
-[.][X]
+## SlowName
+Slow[X]
 
-## SilverKnifeName
-Silver Knife[X]
+## SlowDesc
+Curse enemies to make[N]
+them never double.[X]
 
-## SilverKnifeDesc
-[.][X]
+## HexingRodName
+Hexing Rod[X]
+
+## HexingRodDesc
+Hex enemies, halving[N]
+their max HP.[X]
+
+## RegenName
+Regen[X]
+
+## RegenDesc
+Let allies regenerate[N]
+health over time.[X]
+
+## FreezeName
+Freeze[X]
+
+## FreezeDesc
+Freezes enemies in place.[X]
+
+## SDropName
+S Drop[X]
+
+## SDropDesc
+Restores 25 Ftg.[X]
+
+## SDrinkName
+S Drink[X]
+
+## SDrinkDesc
+Restores all Ftg.[X]
+

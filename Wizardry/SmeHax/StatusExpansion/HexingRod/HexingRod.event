@@ -1,4 +1,4 @@
-#define HexingRodStatusID 0xE //first fully unused status ID
+
 
 SetStatusName(HexingRodStatusID,HexingRodStatusName)
 SetStatusDesc(HexingRodStatusID,HexingRodStatusDesc)

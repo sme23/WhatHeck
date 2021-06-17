@@ -70,7 +70,6 @@ PUSH
 	
 POP
 
-
 ALIGN 4
 prGetIconTileIndex:
 	#incbin "asm/GetIconTileIndex.bin"
@@ -104,8 +103,6 @@ praIconGfxGetters:
 	ORG (praIconGfxGetters + (4 * ICON_SHEET_COUNT))
 
 #define InjectIconGfxGetter(aSheetIndex, aprGfxGetter) "PUSH; ORG (praIconGfxGetters + (4*(aSheetIndex))); POIN (aprGfxGetter); POP"
-
-ORG (currentOffset+256)
 
 ALIGN 4
 AffinityIcons:

@@ -49,6 +49,7 @@ ItemEffectivenessPtr(HeavySpear, ArmorEffectiveness)
 ItemEffectivenessPtr(WindSword, FlierEffectiveness)
 ItemEffectivenessPtr(Dragonstone, MonsterEffectiveness)
 ItemEffectivenessPtr(Aircalibur, FlierEffectiveness)
+ItemEffectivenessPtr(Bowgun, FlierEffectiveness)
 
 //Protector item (macro still works, even if it's wrongly named)
 ItemEffectivenessPtr(DelphiShield, FlierProtection)

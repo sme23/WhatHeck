@@ -13,6 +13,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0,MusicSwapEvent,1,250)
 END_MAIN
 
 CharacterBasedEvents:
@@ -110,4 +111,15 @@ SHLI Heal Mend Freeze HexingRod Vulnerary OliviGrass
 
 ArmoryList:
 SHLI IronSword SteelSword WindSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe
+
+ALIGN 4
+MusicSwapEvent:
+CHECK_EVENTID 4
+BEQ 0 s0 sC
+
+GOTO 1
+LABEL 0
+
+LABEL 1
+
 

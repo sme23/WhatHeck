@@ -145,7 +145,7 @@
 #define SkillScroll 0xBB
 #define Bowgun 		0xBC
 #define ClawCat 	0xBD
-#define Swarp 		0xBE
+#define ClawBird 	0xBE
 #define Aum 		0xBF
 #define Enfeeble 	0xC0
 #define Haste 		0xC1
