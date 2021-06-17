@@ -2,4 +2,12 @@
 {
 #include "Anims/FThief_Sword.event"
 }
-
+{
+#include "Anims/EarthDragon_Monster.event"
+}
+{
+#include "Anims/MarthLord_Sword.event"
+}
+{
+#include "Anims/MarthLord_Unarmed.event"
+}

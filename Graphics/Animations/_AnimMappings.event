@@ -597,21 +597,25 @@ EndAnim
 
 ALIGN 4
 MarthLordAnims:
-
+SwordAnim(MarthLordSwordAnimID)
+UnarmedAnim(MarthLordUnarmedAnimID)
 EndAnim
 
 ALIGN 4
 HeroFAnims:
-
+SwordAnim(FHeroSwordAnimID)
+AxeAnim(FHeroAxeAnimID)
+HandAxeAnim(FHeroHandAxeAnimID)
+UnarmedAnim(HeroUnarmedAnimID)
 EndAnim
 
 ALIGN 4
 CatLaguzAnims:
-
+MonsterAnim(MautheDoogAnimID)
+UnarmedAnim(MautheDoogAnimID)
 EndAnim
 
 ALIGN 4
 RavenLaguzAnims:
-
 EndAnim
 

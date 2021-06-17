@@ -313,7 +313,13 @@
 #define ManaketeUndeadAnimID 201
 
 
-#define ScholarMagicAnimID 202
-#define FThiefSwordAnimID 203
-#define GreenhornSwordAnimID 204
-#define GreenhornUnarmedAnimID 205
+#define FThiefSwordAnimID 202
+#define MarthLordSwordAnimID 203
+#define MarthLordUnarmedAnimID 204
+#define EarthDragonMonsterAnimID 205
+
+#define FHeroSwordAnimID 206
+#define FHeroAxeAnimID 207
+#define FHeroHandAxeAnimID 208
+#define FHeroUnarmedAnimID 209
+
