@@ -1,7 +1,137 @@
 /*
 setMugEntry(Mug,Portrait,2,6,3,4)
 ALIGN 4
-Portrait:
+Portrait:			// by 
 #incext PortraitFormatter ".png"
 */
+
+setMugEntry(MarthMug,MarthPortrait,2,5,3,3)
+ALIGN 4
+MarthPortrait:			// by BatimaTheBat
+#incext PortraitFormatter "Playables/Marth.png"
+
+setMugEntry(PallaMug,PallaPortrait,2,5,3,4)
+ALIGN 4
+PallaPortrait:			// by Obsidian Daddy
+#incext PortraitFormatter "Playables/Palla.png"
+
+setMugEntry(NagiMug,NagiPortrait,2,6,2,4)
+ALIGN 4
+NagiPortrait:			// by BatimaTheBat (yes this is an adult tiki mug, shhhh)
+#incext PortraitFormatter "Playables/Nagi.png"
+
+setMugEntry(GharnefMug,GharnefPortrait,3,5,3,3)
+ALIGN 4
+GharnefPortrait:		// by Sme
+#incext PortraitFormatter "Enemies/Gharnef.png"
+
+setMugEntry(MedeusMug,MedeusPortrait,4,8,4,6)
+ALIGN 4
+MedeusPortrait:			// by Frigid
+#incext PortraitFormatter "Enemies/Medeus.png"
+
+setMugEntry(LukasMug,LukasPortrait,3,5,3,3)
+ALIGN 4
+LukasPortrait:			// by Blade
+#incext PortraitFormatter "Playables/Lukas.png"
+
+setMugEntry(TobinMug,TobinPortrait,3,5,3,3)
+ALIGN 4
+TobinPortrait:			// by GabrielKnight
+#incext PortraitFormatter "Playables/Tobin.png"
+
+setMugEntry(SilqueMug,SilquePortrait,3,6,3,4)
+ALIGN 4
+SilquePortrait:			// by Blade
+#incext PortraitFormatter "Playables/Silque.png"
+
+setMugEntry(DeltheaMug,DeltheaPortrait,2,6,3,4)
+ALIGN 4
+DeltheaPortrait:		// by 
+#incext PortraitFormatter "Playables/Delthea.png"
+
+setMugEntry(LuthierMug,LuthierPortrait,2,6,3,4)
+ALIGN 4
+LuthierPortrait:		// by 
+#incext PortraitFormatter "Playables/Luthier.png"
+
+setMugEntry(RanulfMug,RanulfPortrait,2,5,3,3)
+ALIGN 4
+RanulfPortrait:			// by Quotedotlass
+#incext PortraitFormatter "Playables/Ranulf.png"
+
+setMugEntry(LetheMug,LethePortrait,2,5,3,3)
+ALIGN 4
+LethePortrait:			// by Nickt
+#incext PortraitFormatter "Playables/Lethe.png"
+
+setMugEntry(TitaniaMug,TitaniaPortrait,3,5,3,3)
+ALIGN 4
+TitaniaPortrait:		// by SomeDenseGuy
+#incext PortraitFormatter "Playables/Titania.png"
+
+setMugEntry(VikaMug,VikaPortrait,2,6,3,4)
+ALIGN 4
+VikaPortrait:			// by Nickt
+#incext PortraitFormatter "Playables/Vika.png"
+
+setMugEntry(EyvelMug,EyvelPortrait,2,5,3,3)
+ALIGN 4
+EyvelPortrait:			// by Melia
+#incext PortraitFormatter "Playables/Eyvel.png"
+
+setMugEntry(EthlynMug,EthlynPortrait,2,6,3,4)
+ALIGN 4
+EthlynPortrait:			// by WAve
+#incext PortraitFormatter "Playables/Ethlyn.png"
+
+setMugEntry(LinhardtMug,LinhardtPortrait,3,5,3,3)
+ALIGN 4
+LinhardtPortrait:		// by HyperGammaSpaces
+#incext PortraitFormatter "Playables/Linhardt.png"
+
+setMugEntry(MarianneMug,MariannePortrait,4,6,4,4)
+ALIGN 4
+MariannePortrait:		// by Tobiki
+#incext PortraitFormatter "Playables/Marianne.png"
+
+setMugEntry(OwainMug,OwainPortrait,4,6,2,4)
+ALIGN 4
+OwainPortrait:			// by BatimaTheBat
+#incext PortraitFormatter "Playables/Owain.png"
+
+setMugEntry(KageroMug,KageroPortrait,4,6,4,4)
+ALIGN 4
+KageroPortrait:			// by Nobody (the person)
+#incext PortraitFormatter "Playables/Kagero.png"
+
+setMugEntry(LuciusMug,LuciusPortrait,4,5,4,3)
+ALIGN 4
+LuciusPortrait:			// by Zane
+#incext PortraitFormatter "Playables/Lucius.png"
+
+setMugEntry(OswinMug,OswinPortrait,2,4,3,2)
+ALIGN 4
+OswinPortrait:			// FE8 colors by Eldritch Abomination 
+#incext PortraitFormatter "Playables/Oswin.png"
+
+setMugEntry(EchidnaMug,EchidnaPortrait,2,5,3,3)
+ALIGN 4
+EchidnaPortrait:		// by Redbean
+#incext PortraitFormatter "Playables/Echidna.png"
+
+setMugEntry(BattaMug,BattaPortrait,2,5,3,3)
+ALIGN 4
+BattaPortrait:			// FE8 colors by Eldritch Abomination 
+#incext PortraitFormatter "Enemies/Batta.png"
+
+setMugEntry(AnnaMug,AnnaPortrait,2,6,3,4)
+ALIGN 4
+AnnaPortrait:			// by FireEmblemier
+#incext PortraitFormatter "Playables/Anna.png"
+
+setMugEntry(0x64,SaveAnnaPortrait,4,7,6,5)
+ALIGN 4
+SaveAnnaPortrait:		// by Obsidian Daddy
+#incext PortraitFormatter "SaveAnna.png"
 
