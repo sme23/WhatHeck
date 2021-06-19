@@ -155,6 +155,8 @@
 #define Freeze 		0xC5
 #define OliviGrass	0xC6
 #define LaguzStone	0xC7
+#define SDrop		0xC8
+#define SDrink		0xC9
 
 //Chapter ID defs
 

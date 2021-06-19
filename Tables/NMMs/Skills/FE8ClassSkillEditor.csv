@@ -1,6 +1,6 @@
 INLINE ClassSkillTable,Skill
 None,0x0
-Ephraim Lord,0x0
+Lord,0x0
 Eirika Lord,0x0
 Ephraim Master Lord,CantoPlusID
 Eirika Master Lord,CantoPlusID
@@ -127,18 +127,18 @@ Cyclops,0x0
 Elder Bael,0x0
 Journeyman (2),0x0
 Pupil (2),0x0
+Cat Laguz (Untransformed),0x0
+Cat Laguz (Untransformed) (F),0x0
+Cat Laguz (Transformed),CantoPlusID
+Cat Laguz (Transformed) (F),CantoPlusID
+Raven Laguz (Untransformed),0x0
+Raven Laguz (Untransformed) (F),0x0
+Raven Laguz (Transformed),CantoPlusID
+Raven Laguz (Transformed) (F),CantoPlusID
 Thief (F),CunningID
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
--0,0x0
+Earth Dragon,0x0
+Transporter,0x0
+dummy end marker,0x0
 -0,0x0
 -0,0x0
 -0,0x0
