@@ -47,7 +47,7 @@ UNIT Marth Lord 0 Level(15,Ally,0) [14,7] 0 0 0 1 [Rapier,Elixir] NoAI
 UNIT Eyvel Swordmaster_F 0 Level(2,Ally,0) [14,4] 0 0 0 1 [KillingEdge] NoAI
 UNIT Ranulf CatLaguzUntransformed 0 Level(12,Ally,0) [18,6] 0 0 0 1 [ClawCat] NoAI
 UNIT Lethe CatLaguzUntransformed_F 0 Level(12,Ally,0) [16,6] 0 0 0 1 [ClawCat] NoAI
-UNIT Ethlyn Troubadour 0 Level(17,Ally,0) [15,9] 0 0 0 1 [Mend,Enfeeble] NoAI
+UNIT Ethlyn Troubadour 0 Level(17,Ally,0) [15,9] 0 0 0 1 [Mend,Enfeeble,Freeze,Haste] NoAI
 UNIT Palla PegasusKnight 0 Level(16,Ally,0) [18,8] 0 0 0 1 [SlimLance,Javelin] NoAI
 UNIT Lukas Knight 0 Level(14,Ally,0) [12,6] 0 0 0 1 [IronLance,SteelLance] NoAI
 UNIT Tobin Archer 0 Level(15,Ally,0) [13,5] 0 0 0 1 [IronBow,Bowgun] NoAI
@@ -110,7 +110,7 @@ SHLI Heal Mend Freeze HexingRod Vulnerary OliviGrass
 
 
 ArmoryList:
-SHLI IronSword SteelSword WindSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe
+SHLI IronSword SteelSword WindSword IronLance SteelLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow
 
 ALIGN 4
 MusicSwapEvent:
