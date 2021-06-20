@@ -48,3 +48,10 @@ S Drink[X]
 ## SDrinkDesc
 Restores all Ftg.[X]
 
+## FeebleName
+Enfeeble[X]
+
+## FeebleDesc
+Lowers an enemy's[N]
+stats temporarily.[X]
+
