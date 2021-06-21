@@ -59,12 +59,10 @@
 	.equ CurrentCharPtr,		0x03004E50
 	.equ Can_Equip_Item, 		0x08016574
 	.equ Get_Unit_Max_Hp,		0x08019190
-	.equ Get_Unit_Cur_HP,		0x08019150
 	.equ Get_Item_Crit, 		0x08017624
 	.equ Check_Effectiveness, 	0x08016BEC
 	.equ Slayer_Check, 			0x08016C88
 	.equ Talk_Check, 			0x08083F68
-	.equ Support_Check, 		0x08028310
 	.equ return_addr, 			0x080276BE+1
 	.equ x_coord, 				0x10
 	.equ y_coord, 				0x11
@@ -123,30 +121,17 @@ str		r2,[sp,#0x8]			@sp+8 = y - y'
 ldr		r1,=#0x201
 str		r1,[sp,#0xC]			@constant to determine where things get drawn
 @Find out whether we even need to display an hp bar
-@.if FE8 == 1 @ TODO: other games
-@	mov		r0, r4				@ arg r0 = Unit
-@	ldr		r1, =Get_Unit_Max_Hp
-@	mov		r14,r1
-@	.short	0xF800
-@.else
+.if FE8 == 1 @ TODO: other games
+	mov		r0, r4				@ arg r0 = Unit
+	ldr		r1, =Get_Unit_Max_Hp
+	mov		r14,r1
+	.short	0xF800
+.else
 	mov		r0,#maximum_hp
 	ldsb	r0,[r4,r0]
-@.endif
-push {r7}
-mov		r7,r0
-@.if FE8 == 1
-@	mov r0,r4
-@	ldr r1,=Get_Unit_Cur_HP
-@	mov r14,r1
-@	.short 0xF800
-@.else
-mov		r0,#current_hp
-ldsb	r0,[r4,r0]
-@.endif
-
-mov 	r2,r0
-mov 	r0,r7
-pop		{r7}
+.endif
+mov		r2,#current_hp
+ldsb	r2,[r4,r2]
 cmp		r2,r0
 bge		CheckIfSelected			@if hp is max, don't show the bar
 mov		r1,r0 @ arg r1 = mhp
@@ -158,7 +143,7 @@ swi		#6						@damage*11/maxHP
 ldr		r1,=WRAMDisplay
 mov		r14,r1
 lsl		r2,r0,#2
-ldr		r3,=HPFramePointers		@EA defined
+ldr		r3,FramePointers		@EA defined
 add		r2,r3
 ldr		r2,[r2]
 ldr		r1,[sp,#0xC]			@0x201
@@ -172,10 +157,6 @@ mov		r3,#0xFF
 and		r1,r3
 mov		r3,#0
 .short	0xF800					@call routine to display bars
-b CheckIfSelected
-
-.align
-.ltorg
 
 @This section is for effectiveness/talk/wta/whatever, which only display if a unit is selected. Since checking for this every frame makes it super laggy, we create a cache. First byte will be reserved for status of the operation: 0 if unit isn't selected, 1 if filling the cache, 2 if done
 CheckIfSelected:
@@ -212,9 +193,6 @@ bgt		FirstPass				@we haven't looped through all the units yet if current>previo
 mov		r1,#2
 strb	r1,[r0]					@first pass is complete
 b		DisplayOtherIcons
-
-.align
-.ltorg
 
 FirstPass:
 strb	r2,[r0,#1]				@replace previous looked-at unit with current one
@@ -300,28 +278,6 @@ add		r0,#2					@first 2 bytes are occupied
 ldrb	r1,[r4,#0xB]
 add		r0,r1
 strb	r7,[r0]
-
-SupportCheck:
-@28310 should work, but it needs to check the SupportDenier code.
-ldrb	r0,[r4,#0xB]			@allegiance
-mov		r1,#0xC0
-tst		r0,r1
-bne		GoBack					@selecting enemy/ally shouldn't do anything
-
-mov		r0,r6					@current unit's RAM ptr
-ldr		r1,[r4]
-ldrb	r1,[r1,#4]				@current unit's char id
-bl SupportCheckerFunction
-cmp		r0,#0
-beq		WriteToCache2
-mov		r0,#4
-orr		r7,r0
-WriteToCache2:
-ldr		r0,=WarningCache
-add		r0,#2					@first 2 bytes are occupied (we can use same bit as talk)
-ldrb	r1,[r4,#0xB]
-add		r0,r1
-strb	r7,[r0]
 b		GoBack					@opting to do the displaying on the second pass
 
 DisplayOtherIcons:
@@ -358,13 +314,10 @@ add		sp,#0x10
 pop		{r4-r7}
 mov		r0,#status_byte
 ldrb	r0,[r4,r0]
-lsl		r0,#0x1C
-lsr		r0,#0x1C
+lsl		r0,#0x1B
+lsr		r0,#0x1B
 ldr		r1,=return_addr
 bx		r1
-
-.align
-.ltorg
 
 Draw_Warning_Sign:
 @r0=thing to determine what we're drawing, r1=sp (to retrieve x and y stuff)
@@ -386,7 +339,9 @@ ldr		r1,[r5,#0x8]			@y-y'
 add		r1,#0xEE				@y coordinate tweak?
 mov		r2,#0xFF
 and		r1,r2
-ldr		r2,=WS_FrameData
+mov 	r2,#(WS_FrameData - LoadFrameData - 4)
+LoadFrameData:
+add 	r2,pc
 add 	r2,r4
 mov		r3,#0
 .short	0xF800					@call routine to display bars
@@ -395,42 +350,17 @@ pop		{r4-r5}
 pop		{r0}
 bx		r0
 
-.align
 .ltorg
-
-SupportCheckerFunction: @r0=unit struct, r1=unitID. Check if unitID is in unit's support list
-push {r3,r4,lr}
-mov r3, r0						@save unit pointer to r3
-ldr r0, [r0]					@unit ROM data
-ldr r0, [r0, #0x2C] 			@unit support data
-mov r2, r0						@save support data to r2
-cmp r0, #0x0
-beq EndSupportCheckerFunc
-mov r4, #0x0
-sub r4, #0x1
-
-SupportPartnerLoop:
-add r4, #0x1
-cmp r4, #0x7
-bge ReturnNoSupport
-add r0, r2, r4
-ldrb r0, [r0]					@unit id
-cmp r0, r1
-bne SupportPartnerLoop
-
-mov r0, r3
-mov r1, r4
-ldr		r2,=Support_Check
-mov		r14,r2
-.short	0xF800
-b EndSupportCheckerFunc
-
-ReturnNoSupport:
-mov r0, #0x0
-EndSupportCheckerFunc:
-pop {r3,r4}
-pop {r1}
-bx r1
-
 .align
-.ltorg
+
+WS_FrameData: @should be the OAM data
+.long 0x000f0001 @8x8 sprite
+.long 0x087601ff @the tile is 0x76
+Killer_FrameData:
+.long 0x000f0001
+.long 0x087701ff @tile #0x77
+Talk_FrameData:
+.long 0x400f0001 @16x8 sprite
+.long 0x087001ee @tile #0x70
+FramePointers:
+@

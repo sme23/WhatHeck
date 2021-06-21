@@ -62,7 +62,7 @@ Fatigue Restoration Item,FatigueRestorationUsability|IsPointer,FatigueRestoratio
 S Drink,FatigueRestorationUsability|IsPointer,FatigueRestorationPrepUsability|IsPointer,0x802905c,SDrinkEffect|IsPointer
 Olivi Grass,LaguzBarItemUsability|IsPointer,0x802a100,0x802905c,OliviGrassEffect|IsPointer
 Laguz Stone,LaguzBarItemUsability|IsPointer,0x802a100,0x802905c,LaguzStoneEffect|IsPointer
-Berserk (Player Target),0x8028b0c,0x802a100,0x8029048,0x802fe74
+Berserk (Player Target),0x8028bd8,0x802a100,0x8029048,0x802fe74
 0x40,0x8028c04,0x802a100,0x802905c,0x802ff76
 0x41,0x8028c04,0x802a100,0x802905c,0x802ff76
 0x42,0x8028c04,0x802a100,0x802905c,0x802ff76

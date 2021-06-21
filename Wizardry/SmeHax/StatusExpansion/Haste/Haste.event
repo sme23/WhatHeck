@@ -1,7 +1,7 @@
 
 #include "Haste.lyn.event"
 
-
+//#define HasteStatusID 0x11
 
 SetStatusName(HasteStatusID,HasteStatusName)
 SetStatusDesc(HasteStatusID,HasteStatusDesc)

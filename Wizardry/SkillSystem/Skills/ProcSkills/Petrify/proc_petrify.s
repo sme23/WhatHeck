@@ -62,7 +62,7 @@ strb  r0, [r6,#4]
 
 
 WriteStatus:
-mov		r0,#0x3B 	@petrify ID
+mov		r0,#0xB 	@petrify ID
 mov		r1,#0x6F
 strb	r0,[r5,r1]
 

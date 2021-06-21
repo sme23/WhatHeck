@@ -1,8 +1,8 @@
-
+//#define EnfeebleStatusID 0x1F //last valid status ID
 
 SetStatusName(EnfeebleStatusID,EnfeebleName)
 SetStatusDesc(EnfeebleStatusID,EnfeebleDesc)
-SetStatusBlinkyIconFunc(EnfeebleStatusID,BlinkyIconFuncNoIcon)
+SetStatusBlinkyIconFunc(EnfeebleStatusID,BlinkyIconFuncSilenceIcon)
 
 #include "Enfeeble.lyn.event"
 

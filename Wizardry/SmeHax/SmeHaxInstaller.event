@@ -30,3 +30,24 @@
 //#include "FreeMovement/FreeMovement.event"
 #include "savemenu/savemenu.event"
 #include "DurabilityBasedItems/DurabilityBasedItems.event"
+
+
+
+#ifdef __DEBUG__
+PUSH
+ORG $2CD1C
+jumpToHack(StaffAlwaysHits)
+POP
+
+#include "StaffAlwaysHits.lyn.event"
+
+#else // __DEBUG__
+
+PUSH
+ORG $2CD1C
+jumpToHack(StaffAlwaysHitOnSameAllegiance)
+POP
+
+#include "StaffAlwaysHitOnSameAllegiance.lyn.event"
+
+#endif // __DEBUG__

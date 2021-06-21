@@ -112,10 +112,10 @@ IsUnitStatused:
 mov r0,r4
 add r0,#0x30
 ldrb r1,[r0] @This is the status byte?
-mov r0,#0xF @status 0xF = stone
+mov r0,#0x1F @status bitmask
 and r0,r1 
 ldr r3,ItemTable 
-cmp r0,#3 
+cmp r0,#3 @checking for Sleep status, can't attack if sleeped
 bne PrepareExternalLoop
 mov r1,#0xFF
 and r1,r5

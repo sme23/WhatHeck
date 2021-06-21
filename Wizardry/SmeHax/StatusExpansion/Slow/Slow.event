@@ -1,7 +1,7 @@
 
 #include "Slow.lyn.event"
 
-
+//#define SlowStatusID 0x12
 
 SetStatusName(SlowStatusID,SlowStatusName)
 SetStatusDesc(SlowStatusID,SlowStatusDesc)
