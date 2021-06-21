@@ -62,19 +62,28 @@ POP
 ALIGN 4
 BattleQuoteList:
 
+BattleQuoteEntryBothWays(Ch1ChID,1,Batta,AnyChar,BattaBattleQuote)
+
 QuoteListEnd
 
 ALIGN 4
 DeathQuoteList:
 
 //boss death quotes
+DeathQuoteEntry(Ch1ChID,2,Batta,BattaDeathQuote)
 
 //chapter-specific player unit death quotes
 
 //player unit death quotes
+DeathQuoteEntry(AnyCh,GameOverFlag,Marth,MarthDeathQuote)
+DeathQuoteEntry(AnyCh,0,Eyvel,EyvelDeathQuote)
+DeathQuoteEntry(AnyCh,0,Ranulf,RanulfDeathQuote)
+DeathQuoteEntry(AnyCh,0,Lethe,LetheDeathQuote)
+DeathQuoteEntry(AnyCh,0,Ethlyn,EthlynDeathQuote)
+DeathQuoteEntry(AnyCh,0,Palla,PallaDeathQuote)
+DeathQuoteEntry(AnyCh,0,Lukas,LukasDeathQuote)
+DeathQuoteEntry(AnyCh,0,Tobin,TobinDeathQuote)
+
 
 QuoteListEnd
-
-
-
 

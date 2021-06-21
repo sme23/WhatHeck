@@ -298,4 +298,6 @@ Win the chapter.[X]
 
 #include "unitinfo_text.txt"
 
+#include "quote_text.txt"
+
 #include "chapter_text/_chapter_text.txt"

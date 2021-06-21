@@ -10,11 +10,11 @@ POP
 Chname:
 #incbin "ASM/fe8_chapter_names.dmp"
 ALIGN 4
-POIN ChapFont
-POIN CharTable
+POIN ChFont
+POIN ChTable
 
-ChapFont:
+ChFont:
 #incbin "ASM/font.png.dmp"	//HINT=BIN
 
-CharTable:
+ChTable:
 #incbin "ASM/chartable.dmp"	//HINT=BIN

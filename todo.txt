@@ -1,11 +1,7 @@
-are laguz bars not going down?
-test new items
-skill scrolls are doing staff things (aum??)
-refuge
-death quotes on ch1 units
-Batta battle quote
+
 make GBC bootleg FE theme use same instrument table as FE1 map theme
 fix impassable terrain on map
+
 
 then move on to chapter 2
 

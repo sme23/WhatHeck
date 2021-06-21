@@ -83,3 +83,11 @@ This character's current age.[X]
 ## HeightDesc
 This character's height.[X]
 
+## SS_FatigueRText
+Fatigue. Increases from[N]
+battle or staves.[X]
+
+## SS_LaguzBarRText
+Transformation bar.[N]
+Transform when full.[X]
+

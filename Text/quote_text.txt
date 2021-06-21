@@ -1,0 +1,58 @@
+## MarthDeathQuote
+[OpenMidRight][LoadMarth]
+Forgive me, my friends...[A][X]
+
+## EyvelDeathQuote
+[OpenMidRight][LoadEyvel]
+Everyone...[A][N]
+S-Someday this will all[N]
+just be a bad memory...[A][N]
+So don't you give up.[A][N]
+Never... give... up...[A][X]
+
+## RanulfDeathQuote
+[OpenMidRight][LoadRanulf]
+Ouch... Well, that does it.[A][N]
+I'm getting out of here before[N]
+I become a burden to you.[A][X]
+
+## LetheDeathQuote
+[OpenMidRight][LoadLethe]
+Ahhgrr! A terrible mistake...[A][N]
+I must be allowed to withdraw.[A][N]
+All of you, live to fight again![A][X]
+
+## EthlynDeathQuote
+[OpenMidRight][LoadEthlyn]
+Quan, I'm sorry...[A][X]
+
+## PallaDeathQuote
+[OpenMidRight][LoadPalla]
+Lady Minerva, I'm sorry...[A][X]
+
+## LukasDeathQuote
+[OpenMidRight][LoadLukas]
+So this...is the[N]
+last place I'll see...[A][N]
+Still, dying while[N]
+fighting at your side...[A][N]
+is not so terrible[N]
+a way to go...[A][X]
+
+## TobinDeathQuote
+[OpenMidRight][LoadTobin]
+I...I'm finished...[A][N]
+Don't stop fighting...[A][N]
+I know you can...do this...[A][X]
+
+## BattaBattleQuote
+[OpenMidLeft][LoadBatta]
+Who do you think you are?[A][N]
+You think you can stand[N]
+up to Batta the Beast?[A][X]
+
+## BattaDeathQuote
+[OpenMidLeft][LoadBatta]
+What?[N]
+How... How did you--[A][X]
+

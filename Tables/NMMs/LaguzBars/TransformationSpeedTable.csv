@@ -129,12 +129,12 @@ Journeyman (2),0x0,0x0,0x0,0x0
 Pupil (2),0x0,0x0,0x0,0x0
 Cat Laguz (Untransformed),6,12,0,0
 Cat Laguz (Untransformed) (F),6,12,0,0
-Cat Laguz (Transformed),4,8,0,0
-Cat Laguz (Transformed) (F),4,8,0,0
+Cat Laguz (Transformed),0,0,4,8
+Cat Laguz (Transformed) (F),0,0,4,8
 Raven Laguz (Untransformed),3,6,0,0
 Raven Laguz (Untransformed) (F),3,6,0,0
-Raven Laguz (Transformed),5,10,0,0
-Raven Laguz (Transformed) (F),5,10,0,0
+Raven Laguz (Transformed),0,0,5,10
+Raven Laguz (Transformed) (F),0,0,5,10
 Thief (F),0x0,0x0,0x0,0x0
 Earth Dragon,0x0,0x0,0x0,0x0
 Transporter,0x0,0x0,0x0,0x0

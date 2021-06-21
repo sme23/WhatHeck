@@ -350,7 +350,7 @@ Blood of Serenes[X]
 Blood of Hatari[X]
 
 ## AsheraBloodDesc
-Descendent of the  Goddess Ashera.[X]
+Descendent of the Goddess Ashera.[X]
 
 ## YuneBloodDesc
 Descendent of the Goddess Yune.[X]
