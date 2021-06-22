@@ -1,7 +1,7 @@
 
-make GBC bootleg FE theme use same instrument table as FE1 map theme
-fix impassable terrain on map
+move on to chapter 2
 
 
-then move on to chapter 2
 
+
+title screen image that changes based on the most recently played chapter (or just the first file's chapter if booting fresh)

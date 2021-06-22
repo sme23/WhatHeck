@@ -80,6 +80,9 @@ SHORT 0x0EC0 //change right shift amount to 1 less bit (0x1B from 0x1C)
 ORG $2C88C
 SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
 
+ORG $25A22
+SHORT 0x201F //change 0xF bitmask to 0x1F bitmask
+
 ORG $2AD98
 SHORT 0x06C0 //change left shift amount to 1 less bit (0x1B from 0x1C)
 SHORT 0x0EC0 //change right shift amount to 1 less bit (0x1B from 0x1C)
