@@ -47,7 +47,9 @@ BYTE $0 $F8
 SHORT $28FF $D140 $2102 $1C02 $481D $B408 $4B1D $469E $BC08
 BYTE $0 $F8
 SHORT $E046
-BYTE $2C $3C $0 $2 $FC $3B $0 $2 $94 $3C $0 $8 $78 $35 $0 $8 $F0 $6D $8 $8 $44 $6E $8 $8 $80 $13 $0 $6 $68 $A $0 $1
+BYTE $2C $3C $0 $2 $FC $3B $0 $2 $94 $3C $0 $8 $78 $35 $0 $8
+POIN DontBlinkLeft
+BYTE $44 $6E $8 $8 $80 $13 $0 $6 $68 $A $0 $1
 POIN DonateToCirclesTextIDLink
 BYTE $40 $A2 $0 $8 $74 $3F $0 $2 $3C $44 $0 $8
 POIN SS_BloodTextLink
