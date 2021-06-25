@@ -1,3 +1,17 @@
+
+//global music swap event
+ALIGN 4
+MusicSwapEvent:
+CHECK_EVENTID 4
+BEQ 0 s0 sC
+ENUF 4
+GOTO 1
+LABEL 0
+ENUT 4
+LABEL 1
+NoFade
+ENDA
+
 //REDA helpers
 #include "REDAHelpers.event"
 

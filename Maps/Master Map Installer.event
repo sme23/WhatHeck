@@ -12,3 +12,6 @@
 {
 #include "Chapter1Map.event"
 }
+{
+#include "Chapter2Map.event"
+}

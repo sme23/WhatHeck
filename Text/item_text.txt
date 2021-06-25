@@ -1,6 +1,5 @@
 ## BowgunDesc
-An automatic bow that[N]
-deals fixed damage.[X]
+Deals fixed damage.[X]
 
 ## HasteName
 Haste[X]
