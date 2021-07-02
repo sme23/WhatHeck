@@ -44,7 +44,7 @@
 545,545,611,816,815,815,815,815,609,15,79,609,816,815,815,815,815,610,545,545
 </data>
  </layer>
- <layer id="2" name="OpenedTopRoom" width="20" height="27" visible="0">
+ <layer id="2" name="OpenedTopRoom" width="20" height="27">
   <properties>
    <property name="Height" value="8"/>
    <property name="ID" value="0"/>
