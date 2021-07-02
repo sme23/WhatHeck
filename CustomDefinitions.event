@@ -42,6 +42,7 @@
 #define ScrollBoxText(textID) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textID; TEXTEND; REMA"
 #define Coords(xcoord,ycoord) "(ycoord<<16)|xcoord"
 #define MakeSuspendSave "ASMC 0xB5D5D"
+#define CallPrepScreen "CALL $591FD8"
 //End of useful macros
 
 
