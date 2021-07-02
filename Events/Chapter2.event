@@ -14,6 +14,9 @@ POIN BeginningScene EndingScene
 
 TurnBasedEvents:
 TurnEventPlayer(0,MusicSwapEvent,1,250)
+TurnEventPlayer(0,EnemyReinforcementsLeft,7,20)
+TurnEventPlayer(0,EnemyReinforcementsRight,10,24)
+TurnEventPlayer(0,EnemyReinforcementsBottom,8,60)
 END_MAIN
 
 CharacterBasedEvents:
@@ -65,6 +68,14 @@ Tutorial:
 END_MAIN
 
 Units1:
+UNIT Marth 0 0 Level(0,Ally,0) [6,24] 0 0 0 1 NoItems NoAI
+UNIT Eyvel 0 0 Level(0,Ally,0) [4,24] 0 0 0 1 NoItems NoAI
+UNIT Eyvel 0 0 Level(0,Ally,0) [5,25] 0 0 0 1 NoItems NoAI
+UNIT Eyvel 0 0 Level(0,Ally,0) [4,26] 0 0 0 1 NoItems NoAI
+UNIT Eyvel 0 0 Level(0,Ally,0) [13,24] 0 0 0 1 NoItems NoAI
+UNIT Eyvel 0 0 Level(0,Ally,0) [15,24] 0 0 0 1 NoItems NoAI
+UNIT Eyvel 0 0 Level(0,Ally,0) [14,25] 0 0 0 1 NoItems NoAI
+UNIT Eyvel 0 0 Level(0,Ally,0) [15,26] 0 0 0 1 NoItems NoAI
 UNIT
 
 NewUnits:
@@ -79,8 +90,42 @@ EnemyUnits:
 UNIT
 
 HiddenEnemyUnits:
-UNIT Oswin General 0 Level(6,Enemy,0) [9,1] 0 0 0 1 [ShortSpear] NeverMoveAI
+UNIT Oswin General 0 Level(6,Enemy,0) [6,4] 0 0 0 1 [ShortSpear,BattleAxe] NoAI
+UNIT Ch2Generics Knight 0 Level(17,Enemy,1) [6,3] 0 0 0 1 [Javelin] NoAI
+UNIT Ch2Generics Knight 0 Level(18,Enemy,1) [5,3] 0 0 0 1 [Javelin,Vulnerary] NoAI
+UNIT Ch2Generics Knight 0 Level(18,Enemy,1) [5,4] 0 0 0 1 [Javelin] NoAI
+UNIT Ch2Generics Knight 0 Level(17,Enemy,1) [13,3] 0 0 0 1 [Javelin] NoAI
+UNIT Ch2Generics Knight 0 Level(18,Enemy,1) [13,4] 0 0 0 1 [Javelin] NoAI
+UNIT Ch2Generics Knight 0 Level(17,Enemy,1) [14,3] 0 0 0 1 [Javelin] NoAI
+UNIT Ch2Generics Knight 0 Level(18,Enemy,1) [14,4] 0 0 0 1 [Javelin] NoAI
+UNIT Ch2Generics Cleric 0 Level(18,Enemy,1) [4,4] 0 0 0 1 [Mend] NoAI
+UNIT Ch2Generics Cleric 0 Level(18,Enemy,1) [15,4] 0 0 0 1 [Mend] NoAI
+UNIT Ch2Generics Mage 0 Level(19,Enemy,1) [4,3] 0 0 0 1 [Thunder] NoAI
+UNIT Ch2Generics Mage 0 Level(19,Enemy,1) [15,3] 0 0 0 1 [Thunder] NoAI
 UNIT
+
+LeftReinforcementUnits:
+UNIT Ch2Generics Soldier 0 Level(20,Enemy,1) [0,16] 0 0 1 REDA0R16 [ShortSpear] NoAI
+UNIT
+
+RightReinforcementUnits:
+UNIT Ch2Generics Soldier 0 Level(20,Enemy,1) [19,17] 0 0 1 REDA19R17 [ShortSpear] NoAI
+UNIT Ch2Generics Soldier 0 Level(20,Enemy,1) [10,26] 0 0 1 REDA10R26 [ShortSpear] NoAI
+UNIT
+
+BottomReinforcementUnits:
+UNIT Ch2Generics Soldier 0 Level(20,Enemy,1) [9,26] 0 0 1 REDA9R26 [ShortSpear] NoAI
+UNIT
+
+NPCUnits:
+UNIT Ch2NPCs Civilian  0 Level(10,NPC,1) [4,8] 0 0 0 1 NoItems NeverMoveAI
+UNIT Ch2NPCs Civilian_F 0 Level(10,NPC,1) [6,8] 0 0 0 1 NoItems NeverMoveAI
+UNIT Ch2NPCs Civilian_2 0 Level(10,NPC,1) [5,9] 0 0 0 1 NoItems NeverMoveAI
+UNIT Ch2NPCs Civilian_F_2 0 Level(10,NPC,1) [13,8] 0 0 0 1 NoItems NeverMoveAI
+UNIT Ch2NPCs Civilian_3 0 Level(10,NPC,1) [15,8] 0 0 0 1 NoItems NeverMoveAI
+UNIT Ch2NPCs Civilian_F_3 0 Level(10,NPC,1) [14,9] 0 0 0 1 NoItems NeverMoveAI
+UNIT
+
 
 Traps1:
 ENDTRAP
@@ -104,15 +149,17 @@ DeleteAllItems(Tobin)
 GiveNewClaw(Ranulf)
 GiveNewClaw(Lethe)
 
-LOAD1 0 Units1
-ENUN
+
 LOAD1 0 NewUnits
 ENUN
 LOAD1 0 EnemyUnits
 ENUN
+LOAD1 0 NPCUnits
+ENUN
 
 FADU 10
 
+CallPrepScreen
 NoFade
 ENDA
 
@@ -139,3 +186,21 @@ LABEL 776
 NoFade
 ENDA
 
+
+ALIGN 4
+EnemyReinforcementsLeft:
+ReinforcementEvent(LeftReinforcementUnits)
+NoFade
+ENDA
+
+ALIGN 4
+EnemyReinforcementsRight:
+ReinforcementEvent(RightReinforcementUnits)
+NoFade
+ENDA
+
+ALIGN 4
+EnemyReinforcementsBottom:
+ReinforcementEvent(BottomReinforcementUnits)
+NoFade
+ENDA
