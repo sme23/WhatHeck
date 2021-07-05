@@ -8,7 +8,7 @@ ORG $72700
 #incbin "ChangingBattleBGM/72700.bin"
 POP
 
-
+/*
 //per-chapter prep music
 PUSH
 ORG $965E2
@@ -34,7 +34,7 @@ BL($B1D0C)
 ORG $CC6B6
 BL($B1D0C)
 POP
-
+*/
 PerCHPrepMusic1:
 #incbin "ChangingPreparationBGM/c0p.bin"
 

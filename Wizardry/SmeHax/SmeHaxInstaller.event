@@ -27,10 +27,10 @@
 
 
 #include "Swarp/Swarp.event"
-//#include "FreeMovement/FreeMovement.event"
+#include "FreeMovement/FreeMovement.event"
 #include "savemenu/savemenu.event"
 #include "DurabilityBasedItems/DurabilityBasedItems.event"
-
+#include "DeleteAllItems/DeleteAllItems.event"
 
 
 #ifdef __DEBUG__

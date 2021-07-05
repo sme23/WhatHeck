@@ -4,4 +4,4 @@
 #define GiveNewClaw(charID) "SVAL s1 charID; ASMC GiveNewClawASMC"
 
 #include "DeleteAllItems.lyn.event"
-#include "CheckTileChange.lyn.event"
+//#include "CheckTileChange.lyn.event"
