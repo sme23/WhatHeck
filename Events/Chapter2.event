@@ -80,10 +80,10 @@ UNIT Eyvel 0 0 Level(0,Ally,0) [15,26] 0 0 0 1 NoItems NoAI
 UNIT
 
 NewUnits:
-UNIT Linhardt Mage 0 Level(16,Ally,0) [19,16] 0 0 1 REDA19R16 [Thunder] NoAI
-UNIT Owain Myrmidon 0 Level(15,Ally,0) [19,17] 0 0 1 REDA18R17 [SteelSword] NoAI
+UNIT Linhardt Mage 0 Level(16,Ally,0) [19,16] 0 0 1 REDA17R16 [Thunder] NoAI
+UNIT Owain Myrmidon 0 Level(15,Ally,0) [19,17] 0 0 1 REDA16R17 [SteelSword] NoAI
 UNIT Kagero Thief_F 0 Level(11,Ally,0) [10,26] 0 0 1 REDA10R23 [SlimSword,Lockpick] NoAI
-UNIT Lucius Monk 0 Level(18,Ally,0)[0,17] 0 0 1 REDA1R17 [Divine] NoAI 
+UNIT Lucius Monk 0 Level(18,Ally,0)[0,17] 0 0 1 REDA2R17 [Divine] NoAI 
 UNIT Marianne PegasusKnight 0 Level(17,Ally,0) [0,16] 0 0 1 REDA3R16 [BraveLance] NoAI
 UNIT
 
