@@ -88,12 +88,12 @@ UNIT Marianne PegasusKnight 0 Level(17,Ally,0) [0,16] 0 0 1 REDA3R16 [BraveLance
 UNIT
 
 EnemyUnits:
-UNIT Ch2Generics Knight 0 Level(18,Enemy,1) [9,12] 0 0 0 1 [Javelin,Vulnerary] NeverMoveAI
+UNIT Ch2Generics Knight 0 Level(18,Enemy,1) [9,12] 0 0 0 1 [Javelin,ChestKey] NeverMoveAI
 UNIT Ch2Generics Knight 0 Level(17,Enemy,1) [10,12] 0 0 0 1 [Javelin,DoorKey] NeverMoveAI
-UNIT Ch2Generics Soldier 0 Level(19,Enemy,1) [6,13] 0 0 0 1 [Javelin] AttackInRangeAI
+UNIT Ch2Generics Soldier 0 Level(19,Enemy,1) [6,13] 0 0 0 1 [Javelin,ChestKey] AttackInRangeAI
 UNIT Ch2Generics Soldier 0 Level(20,Enemy,1) [13,13] 0 0 0 1 [Javelin,Vulnerary] AttackInRangeAI
-UNIT Ch2Generics Soldier 0 Level(20,Enemy,1) [6,20] 0 0 0 1 [Javelin] AttackInRangeAI
-UNIT Ch2Generics Soldier 0 Level(19,Enemy,1) [13,20] 0 0 0 1 [Javelin,Vulnerary] AttackInRangeAI
+UNIT Ch2Generics Soldier 0 Level(20,Enemy,1) [6,20] 0 0 0 1 [Javelin,ChestKey] AttackInRangeAI
+UNIT Ch2Generics Soldier 0 Level(19,Enemy,1) [13,20] 0 0 0 1 [Javelin,ChestKey] AttackInRangeAI
 UNIT
 
 HiddenEnemyUnits:
