@@ -51,9 +51,18 @@ Door(6,22)
 Door(13,22)
 END_MAIN
 
+NPCEscapePointPointerTable(Ch2ChID, NPCEscapePoints)
+ALIGN 4
+NPCEscapePoints:
+EscapePoint(9, 0, MoveUp)
+EscapePoint(10, 0, MoveUp)
+EscapePointEnd
+
 MiscBasedEvents:
 CauseGameOverIfLordDies
 AFEV 7 TopDoorOpened 0
+AFEV 8 HandleNPCDoor1 0
+AFEV 9 HandleNPCDoor2 0
 END_MAIN
 
 Dunno1:
@@ -174,6 +183,26 @@ ENDA
 
 ALIGN 4
 EndingScene:
+
+#ifndef __DEBUG__
+
+EscapeDeathCheck(Marth)
+EscapeDeathCheck(Eyvel)
+EscapeDeathCheck(Ranulf)
+EscapeDeathCheck(Lethe)
+EscapeDeathCheck(Ethlyn)
+EscapeDeathCheck(Palla)
+EscapeDeathCheck(Lukas)
+EscapeDeathCheck(Tobin)
+EscapeDeathCheck(Linhardt)
+EscapeDeathCheck(Owain)
+EscapeDeathCheck(Kagero)
+EscapeDeathCheck(Lucius)
+EscapeDeathCheck(Marianne)
+EscapeDeathCheck(Oswin)
+
+#endif // __DEBUG__
+
 MNC2 Ch3ChID
 NoFade
 ENDA
@@ -212,3 +241,64 @@ EnemyReinforcementsBottom:
 ReinforcementEvent(BottomReinforcementUnits)
 NoFade
 ENDA
+
+ALIGN 4
+HandleNPCDoor1:
+//check each door's tilechange ID and change the char ID's AI if is triggered, otherwise unset flag for this event
+
+SVAL s2 1
+ASMC CheckTileChangeASMC //check tilechange ID in s1
+BEQ 1337 s0 sC //goto LABEL 1337 if tilechange isn't set
+
+//tilechange is set, so change green units' AI
+SVAL s1 0x20040C00 //CHAI data
+CHAI [4,8] //change AI of unit at coordinates
+SVAL s1 0x20040C00 //CHAI data
+CHAI [5,9] //change AI of unit at coordinates
+SVAL s1 0x20040C00 //CHAI data
+CHAI [6,8] //change AI of unit at coordinates
+
+GOTO 42069
+
+LABEL 1337
+
+//tilechange is not set, so unset current event's flag
+
+ENUF 8 //unset current event's flag
+
+LABEL 42069
+
+NoFade
+ENDA
+
+
+ALIGN 4
+HandleNPCDoor2:
+//check each door's tilechange ID and change the char ID's AI if is triggered, otherwise unset flag for this event
+
+SVAL s2 2
+ASMC CheckTileChangeASMC //check tilechange ID in s1
+BEQ 1337 s0 sC //goto LABEL 1337 if tilechange isn't set
+
+//tilechange is set, so change green units' AI
+SVAL s1 0x20040C00 //CHAI data
+CHAI [13,8] //change AI of unit at coordinates
+SVAL s1 0x20040C00 //CHAI data
+CHAI [14,9] //change AI of unit at coordinates
+SVAL s1 0x20040C00 //CHAI data
+CHAI [15,8] //change AI of unit at coordinates
+
+GOTO 42069
+
+LABEL 1337
+
+//tilechange is not set, so unset current event's flag
+
+ENUF 9 //unset current event's flag
+
+LABEL 42069
+
+NoFade
+ENDA
+
+

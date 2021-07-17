@@ -1,5 +1,7 @@
 #define MultiTileMarkerEntry(chID,xCoord,yCoord,classID,flagID) "BYTE chID xCoord yCoord classID; SHORT flagID 0"
 
 MultiTileMarker_Table:
+MultiTileMarkerEntry(Ch2ChID,9,0,0,7)
+MultiTileMarkerEntry(Ch2ChID,10,0,0,7)
 BYTE 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF 0xFF    // term
 
