@@ -1,5 +1,6 @@
 
-move on to chapter 2
+add green sigils on ch2 escape tiles when top room opens 
+balance & test chapter 2
 
 
 
