@@ -84,6 +84,18 @@ MovingMapSprite(RavenLaguzUntransformed_F,MapSprite16x16,FRavenUntr_M)
 StandingMapSprite(TransporterStandingMapSpriteID,MapSprite16x32,Transporter_S)
 MovingMapSprite(Transporter,$1C3D7C,Transporter_M)
 
+StandingMapSprite(TelliusTorchOnMapSpriteID,MapSprite16x16,LitTorch)
+StandingMapSprite(TelliusTorchOffMapSpriteID,MapSprite16x16,UnlitTorch)
+
+
+ALIGN 4
+LitTorch:
+#incext Png2Dmp "lit_torch.png" --lz77
+
+ALIGN 4
+UnlitTorch:
+#incext Png2Dmp "unlit_torch.png" --lz77
+
 ALIGN 4
 ThiefF_S:
 #incext Png2Dmp "ThiefF_S.png" --lz77

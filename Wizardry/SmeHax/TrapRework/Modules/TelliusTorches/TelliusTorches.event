@@ -8,9 +8,10 @@
 	//Unlike torch staff traps, these do not lose their vision over time
 	
 	#define TelliusTorchTrapID 15 //just sequentially after what i'm aware of being used by other hacks already
+	#ifndef TelliusTorchOffMapSpriteID
 	#define TelliusTorchOffMapSpriteID 0x69
 	#define TelliusTorchOnMapSpriteID 0x6A
-	
+	#endif // TelliusTorchOffMapSpriteID	
 
 
 	SetTrapEventInit(TelliusTorchTrapID,TelliusTorchInitialization)

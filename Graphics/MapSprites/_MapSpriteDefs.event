@@ -128,3 +128,6 @@
 #define MarthStandingMapSpriteID 110
 #define EarthDragonStandingMapSpriteID 111
 
+#define TelliusTorchOffMapSpriteID 0x69
+#define TelliusTorchOnMapSpriteID 0x6A
+	
