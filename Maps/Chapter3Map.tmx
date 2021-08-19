@@ -4,6 +4,16 @@
   <image source="tilesets/Village1.png" width="512" height="512"/>
  </tileset>
  <layer id="1" name="Tile Layer 1" width="21" height="21">
+  <properties>
+   <property name="Anims1" value="VillageAnims"/>
+   <property name="ChapterID" value="Ch3ChID"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="Ch3MapChangesID"/>
+   <property name="MapID" value="Ch3MapID"/>
+   <property name="ObjectType" value="VillageObjType"/>
+   <property name="PaletteID" value="VillagePalette1"/>
+   <property name="TileConfig" value="VillageTileConfig"/>
+  </properties>
   <data encoding="csv">
 450,450,451,258,719,623,623,782,455,517,303,303,517,303,751,714,2,67,449,450,450,
 450,450,483,719,782,452,554,549,303,517,453,485,453,517,751,652,2,67,481,450,450,
