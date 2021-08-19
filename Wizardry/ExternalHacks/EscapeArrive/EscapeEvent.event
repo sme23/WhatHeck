@@ -30,4 +30,10 @@ LABEL 777
 NoFade
 ENDA
 
-
+ThraciaEscapeProcessorDeath: //gets passed a char ID in s2
+CHECK_DEPLOYED (-3) //uses value in s2
+BEQ 776 s0 sC //go bakc if unit is not deployed
+DISA (-3) //otherwise, they get killed
+LABEL 776
+NoFade
+ENDA

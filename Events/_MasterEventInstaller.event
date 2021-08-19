@@ -31,7 +31,7 @@ ENDA
 }
 
 {
-//#include "Chapter3.event"
+#include "Chapter3.event"
 }
 
 {

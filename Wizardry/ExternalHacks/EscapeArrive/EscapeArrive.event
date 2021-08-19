@@ -54,6 +54,7 @@ POP
 	
 //This will set the given flag if the unit did not escape
 #define EscapeCapturedCheck(charID,flagID) "SVAL 0xD 0; SVAL 1 charID; SENQUEUE 1; SVAL 1 flagID; SENQUEUE 1; CALL ThraciaEscapeProcessor"
+#define EscapeDeathCheck(charID) "SVAL s2 charID; CALL ThraciaEscapeProcessorDeath"
 
 #endif // ESCAPE_ARRIVE_INSTALLED
 
