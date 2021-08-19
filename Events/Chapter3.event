@@ -51,13 +51,13 @@ UNIT Eyvel 0 0 Level(0,Ally,0) [7,10] 0 0 0 1 NoItems NoAI
 UNIT
 
 NewUnits:
-UNIT Echidna Hero 0 Level(,Ally,0) [0,0] 0 0 0 1 [SilverSword,HandAxe] NoAI
-UNIT Titania Paladin_F 0 Level(,Ally,0) [0,1] 0 0 0 1 [SilverLance,SteelSword] NoAI
-UNIT Delthea Mage_F 0 Level(,Ally,0) [0,2] 0 0 0 1 [Elfire] NoAI
-UNIT Luthier Mage 0 Level(,Ally,0) [0,3] 0 0 0 1 [Thunder] NoAI
-UNIT Vika RavenLaguzUntransformed_F 0 Level(,Ally,0) [0,4] 0 0 0 1 [ClawBird] NoAI
-UNIT Silque Bishop_F 0 Level(,Ally,0) [0,5] 0 0 0 1 [Physic,Regen] NoAI
-UNIT Anna Transporter 0 Level(,Ally,0) [0,6] 0 0 0 1 NoItems NoAI
+UNIT Echidna Hero 0 Level(13,Ally,0) [0,0] 0 0 0 1 [SilverSword,HandAxe] NoAI
+UNIT Titania Paladin_F 0 Level(10,Ally,0) [0,1] 0 0 0 1 [SilverLance,SteelSword] NoAI
+UNIT Delthea Mage_F 0 Level(8,Ally,0) [0,2] 0 0 0 1 [Elfire] NoAI
+UNIT Luthier Mage 0 Level(12,Ally,0) [0,3] 0 0 0 1 [Thunder] NoAI
+UNIT Vika RavenLaguzUntransformed_F 0 Level(14,Ally,0) [0,4] 0 0 0 1 [ClawBird] NoAI
+UNIT Silque Bishop_F 0 Level(9,Ally,0) [0,5] 0 0 0 1 [Physic,Regen] NoAI
+UNIT Anna Transporter 0 Level(15,Ally,0) [0,6] 0 0 0 1 NoItems NoAI
 UNIT
 
 EnemyUnits:
